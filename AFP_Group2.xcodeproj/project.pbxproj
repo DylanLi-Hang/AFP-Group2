@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0A1ACB2B0705FD00D94D49 /* BubblesMoving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A1ACA2B0705FD00D94D49 /* BubblesMoving.swift */; };
 		FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */; };
 		FC0228E42B06F99200BCC14C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228E32B06F99200BCC14C /* ContentView.swift */; };
 		FC0228E62B06F99400BCC14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0228E52B06F99400BCC14C /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B0A1ACA2B0705FD00D94D49 /* BubblesMoving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesMoving.swift; sourceTree = "<group>"; };
 		FC0228DE2B06F99200BCC14C /* AFP_Group2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFP_Group2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFP_Group2App.swift; sourceTree = "<group>"; };
 		FC0228E32B06F99200BCC14C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				FC0228F12B06FF7D00BCC14C /* BubbleView.swift */,
+				5B0A1ACA2B0705FD00D94D49 /* BubblesMoving.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0228F22B06FF7D00BCC14C /* BubbleView.swift in Sources */,
+				5B0A1ACB2B0705FD00D94D49 /* BubblesMoving.swift in Sources */,
 				FC0228E42B06F99200BCC14C /* ContentView.swift in Sources */,
 				FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */,
 			);

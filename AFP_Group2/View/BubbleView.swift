@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct BubbleView: View {
-    var size : Int = 10
-    var color : Color = Color.red
-    
-    
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .foregroundStyle(color)
+
+        Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+        }
     }
 }
+
+
 
 #Preview {
     BubbleView()
