@@ -4,21 +4,24 @@
 //
 //  Created by Dylan on 17/11/2023.
 //
-
 import SwiftUI
 
 struct BubbleView: View {
-
     var body: some View {
-
-        Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
-            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+        Button("Hola") {
+            // Add action here
         }
+        .frame(width: 200, height: 200)
+        .background(Color("purpleish"))
+        .foregroundColor(Color("blackish"))
+        .clipShape(Circle())
+        
+        
     }
 }
 
-
-
-#Preview {
-    BubbleView()
+struct BubbleView_Previews: PreviewProvider {
+    static var previews: some View {
+        BubbleView()
+    }
 }
