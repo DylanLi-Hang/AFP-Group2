@@ -7,6 +7,10 @@
 import SwiftUI
 
 struct BubbleView: View {
+    var size : Int = 10
+    var color : Color = Color.red
+    var text : String = "hello"
+    
     var body: some View {
         Button("Hola") {
             // Add action here
