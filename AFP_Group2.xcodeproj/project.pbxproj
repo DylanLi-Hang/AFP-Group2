@@ -22,6 +22,7 @@
 		FC2A24BA2B0B1CCF006F81FF /* VideoSwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24B92B0B1CCF006F81FF /* VideoSwipingView.swift */; };
 		FC2A24BC2B0B1CE5006F81FF /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24BB2B0B1CE5006F81FF /* TapView.swift */; };
 		FC2A24BE2B0B1CFF006F81FF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */; };
+		FC2A24C02B0B2156006F81FF /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24BF2B0B2156006F81FF /* QuoteView.swift */; };
 		FCE289522B0729500073CAF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE289502B0729500073CAF1 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		FC2A24B92B0B1CCF006F81FF /* VideoSwipingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSwipingView.swift; sourceTree = "<group>"; };
 		FC2A24BB2B0B1CE5006F81FF /* TapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
 		FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		FC2A24BF2B0B2156006F81FF /* QuoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		FCE289502B0729500073CAF1 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 		FC0228F02B06FF6800BCC14C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC2A24BF2B0B2156006F81FF /* QuoteView.swift */,
 				FC2A24BB2B0B1CE5006F81FF /* TapView.swift */,
 				FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */,
 				FC2A24B92B0B1CCF006F81FF /* VideoSwipingView.swift */,
@@ -204,6 +207,7 @@
 				FC2A24BA2B0B1CCF006F81FF /* VideoSwipingView.swift in Sources */,
 				FC0A27082B0ACDB80082F899 /* CollectStarView.swift in Sources */,
 				FC0228F72B07122700BCC14C /* RolemodelModel.swift in Sources */,
+				FC2A24C02B0B2156006F81FF /* QuoteView.swift in Sources */,
 				FC0A27042B0A37180082F899 /* BottleView.swift in Sources */,
 				FC0228FB2B0713EE00BCC14C /* QuoteModel.swift in Sources */,
 				FC0228F92B07135500BCC14C /* StereotypeModel.swift in Sources */,
