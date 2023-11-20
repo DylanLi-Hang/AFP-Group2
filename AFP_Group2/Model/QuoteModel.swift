@@ -8,11 +8,11 @@
 import Foundation
 
 class QuoteModel {
-    var name : String
+    var name : String?
     var roleModel : RolemodelModel?
     var quoteContent : String
     
-    init(name: String, quoteContent: String) {
+    init(name: String? = nil, quoteContent: String) {
         self.name = name
         self.quoteContent = quoteContent
     }

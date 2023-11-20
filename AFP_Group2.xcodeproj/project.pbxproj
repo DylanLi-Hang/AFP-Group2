@@ -13,10 +13,14 @@
 		FC0228E62B06F99400BCC14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0228E52B06F99400BCC14C /* Assets.xcassets */; };
 		FC0228E92B06F99400BCC14C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0228E82B06F99400BCC14C /* Preview Assets.xcassets */; };
 		FC0228F72B07122700BCC14C /* RolemodelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228F62B07122700BCC14C /* RolemodelModel.swift */; };
-		FC0228F92B07135500BCC14C /* StereotypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228F82B07135500BCC14C /* StereotypeModel.swift */; };
+		FC0228F92B07135500BCC14C /* MisconceptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228F82B07135500BCC14C /* MisconceptionModel.swift */; };
 		FC0228FB2B0713EE00BCC14C /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228FA2B0713EE00BCC14C /* QuoteModel.swift */; };
 		FC0A27042B0A37180082F899 /* BottleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A27032B0A37180082F899 /* BottleView.swift */; };
 		FC0A27082B0ACDB80082F899 /* CollectStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A27072B0ACDB80082F899 /* CollectStarView.swift */; };
+		FC0B38422B0B7EC0005ECC61 /* convert.py in Resources */ = {isa = PBXBuildFile; fileRef = FC0B38412B0B7EC0005ECC61 /* convert.py */; };
+		FC0B38442B0B7F47005ECC61 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = FC0B38432B0B7F47005ECC61 /* data.json */; };
+		FC0B38482B0B94A2005ECC61 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B38472B0B94A2005ECC61 /* DataModel.swift */; };
+		FC0B388C2B0C1DC2005ECC61 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B388B2B0C1DC2005ECC61 /* Icons.swift */; };
 		FC2A24B62B0B1BE6006F81FF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = FC2A24B52B0B1BE6006F81FF /* Lottie */; };
 		FC2A24B82B0B1CC3006F81FF /* tap.json in Resources */ = {isa = PBXBuildFile; fileRef = FC2A24B72B0B1CC3006F81FF /* tap.json */; };
 		FC2A24BA2B0B1CCF006F81FF /* VideoSwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24B92B0B1CCF006F81FF /* VideoSwipingView.swift */; };
@@ -31,10 +35,15 @@
 		FC0228E52B06F99400BCC14C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0228E82B06F99400BCC14C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC0228F62B07122700BCC14C /* RolemodelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolemodelModel.swift; sourceTree = "<group>"; };
-		FC0228F82B07135500BCC14C /* StereotypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StereotypeModel.swift; sourceTree = "<group>"; };
+		FC0228F82B07135500BCC14C /* MisconceptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisconceptionModel.swift; sourceTree = "<group>"; };
 		FC0228FA2B0713EE00BCC14C /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		FC0A27032B0A37180082F899 /* BottleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottleView.swift; sourceTree = "<group>"; };
 		FC0A27072B0ACDB80082F899 /* CollectStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectStarView.swift; sourceTree = "<group>"; };
+		FC0B38402B0B7E7D005ECC61 /* Misconceptions.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Misconceptions.xlsx; sourceTree = "<group>"; };
+		FC0B38412B0B7EC0005ECC61 /* convert.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert.py; sourceTree = "<group>"; };
+		FC0B38432B0B7F47005ECC61 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		FC0B38472B0B94A2005ECC61 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		FC0B388B2B0C1DC2005ECC61 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		FC2A24B72B0B1CC3006F81FF /* tap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tap.json; sourceTree = "<group>"; };
 		FC2A24B92B0B1CCF006F81FF /* VideoSwipingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSwipingView.swift; sourceTree = "<group>"; };
 		FC2A24BB2B0B1CE5006F81FF /* TapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
@@ -96,7 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				FC0228F62B07122700BCC14C /* RolemodelModel.swift */,
-				FC0228F82B07135500BCC14C /* StereotypeModel.swift */,
+				FC0B38472B0B94A2005ECC61 /* DataModel.swift */,
+				FC0228F82B07135500BCC14C /* MisconceptionModel.swift */,
 				FC0228FA2B0713EE00BCC14C /* QuoteModel.swift */,
 			);
 			path = Model;
@@ -105,6 +115,7 @@
 		FC0228F02B06FF6800BCC14C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC0B388B2B0C1DC2005ECC61 /* Icons.swift */,
 				FC2A24BF2B0B2156006F81FF /* QuoteView.swift */,
 				FC2A24BB2B0B1CE5006F81FF /* TapView.swift */,
 				FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */,
@@ -118,6 +129,9 @@
 		FC0228F32B070DB800BCC14C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC0B38432B0B7F47005ECC61 /* data.json */,
+				FC0B38402B0B7E7D005ECC61 /* Misconceptions.xlsx */,
+				FC0B38412B0B7EC0005ECC61 /* convert.py */,
 				FC2A24B72B0B1CC3006F81FF /* tap.json */,
 			);
 			path = Resources;
@@ -188,6 +202,8 @@
 			files = (
 				FC0228E92B06F99400BCC14C /* Preview Assets.xcassets in Resources */,
 				FC0228E62B06F99400BCC14C /* Assets.xcassets in Resources */,
+				FC0B38422B0B7EC0005ECC61 /* convert.py in Resources */,
+				FC0B38442B0B7F47005ECC61 /* data.json in Resources */,
 				FC2A24B82B0B1CC3006F81FF /* tap.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,11 +222,13 @@
 				FCE289522B0729500073CAF1 /* ContentView.swift in Sources */,
 				FC2A24BA2B0B1CCF006F81FF /* VideoSwipingView.swift in Sources */,
 				FC0A27082B0ACDB80082F899 /* CollectStarView.swift in Sources */,
+				FC0B38482B0B94A2005ECC61 /* DataModel.swift in Sources */,
+				FC0B388C2B0C1DC2005ECC61 /* Icons.swift in Sources */,
 				FC0228F72B07122700BCC14C /* RolemodelModel.swift in Sources */,
 				FC2A24C02B0B2156006F81FF /* QuoteView.swift in Sources */,
 				FC0A27042B0A37180082F899 /* BottleView.swift in Sources */,
 				FC0228FB2B0713EE00BCC14C /* QuoteModel.swift in Sources */,
-				FC0228F92B07135500BCC14C /* StereotypeModel.swift in Sources */,
+				FC0228F92B07135500BCC14C /* MisconceptionModel.swift in Sources */,
 				FC2A24BE2B0B1CFF006F81FF /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
