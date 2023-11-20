@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0A1ACB2B0705FD00D94D49 /* BubblesMoving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A1ACA2B0705FD00D94D49 /* BubblesMoving.swift */; };
 		054635C82B07196700011989 /* BubbleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054635C72B07196700011989 /* BubbleAnimation.swift */; };
 		05CD9C0E2B0838AE007C0BF7 /* ExplosionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD9C0D2B0838AE007C0BF7 /* ExplosionView.swift */; };
 		05CD9C102B083CCB007C0BF7 /* BubbleMoving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD9C0F2B083CCB007C0BF7 /* BubbleMoving.swift */; };
@@ -24,7 +25,6 @@
 		05CD9C112B0B0202007C0BF7 /* BubbleIntersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BubbleIntersection.swift; path = AFP_Group2/BubbleIntersection.swift; sourceTree = SOURCE_ROOT; };
 		FC0228DE2B06F99200BCC14C /* AFP_Group2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFP_Group2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFP_Group2App.swift; sourceTree = "<group>"; };
-		FC0228E32B06F99200BCC14C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC0228E52B06F99400BCC14C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0228E82B06F99400BCC14C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +87,8 @@
 		FC0228F02B06FF6800BCC14C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC0228F12B06FF7D00BCC14C /* BubbleView.swift */,
+				5B0A1ACA2B0705FD00D94D49 /* BubblesMoving.swift */,
 				054635C72B07196700011989 /* BubbleAnimation.swift */,
 				05CD9C0D2B0838AE007C0BF7 /* ExplosionView.swift */,
 				05CD9C0F2B083CCB007C0BF7 /* BubbleMoving.swift */,
@@ -165,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0228F22B06FF7D00BCC14C /* BubbleView.swift in Sources */,
+				5B0A1ACB2B0705FD00D94D49 /* BubblesMoving.swift in Sources */,
 				FC0228E42B06F99200BCC14C /* ContentView.swift in Sources */,
 				054635C82B07196700011989 /* BubbleAnimation.swift in Sources */,
 				05CD9C0E2B0838AE007C0BF7 /* ExplosionView.swift in Sources */,
