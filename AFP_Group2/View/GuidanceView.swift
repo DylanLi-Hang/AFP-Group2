@@ -28,7 +28,7 @@ struct GuidanceView: View {
                     .frame(width: 200, height: 200)
                     .overlay(
                     Text("I'm not good at coding")
-                    .font(.headline)
+                        .font(.caption.bold())
                     .foregroundColor(.black)
                     )
                     .padding(.bottom, 50)
