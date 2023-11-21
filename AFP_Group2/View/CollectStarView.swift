@@ -12,7 +12,7 @@ struct CollectStarView: View {
     var scene: SKScene {
         let scene = StarScene()
         
-        scene.size = CGSize(width: 100, height: 200)
+        scene.size = CGSize(width: 100, height: 180)
         scene.scaleMode = .aspectFill
         return scene
     }
@@ -20,10 +20,13 @@ struct CollectStarView: View {
     var body: some View {
         ZStack{
             SpriteView(scene: scene)
-                .frame(width: 100, height: 200)
+                .frame(width: 100, height: 180)
                 .offset(y:120)
             BottleView(isHighlighted: false)
-                .offset(y:120)
+                .offset(y:140)
+            
+            Text(attributedString(text: "This is bottle", highlighted: "bottle"))
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
         }
         
     }

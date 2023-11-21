@@ -15,7 +15,7 @@ struct BottleView: View {
     
     var body: some View {
         ZStack {
-            Image("Jar")
+            Image("Jar1")
                 .resizable()
                 .frame(minWidth: 50, maxWidth: 120, minHeight: 50, maxHeight: 200)
                 .scaledToFit()
