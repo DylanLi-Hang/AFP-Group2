@@ -8,6 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        // Configure the UITabBar appearance
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.white
+
+        // Apply the appearance to all tab bar instances
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+    }
+ 
+    @StateObject var viewModel = QuoteViewModel() // Observe changes in QuoteViewModel
+
     var body: some View {
         TabView {
             TapView()
@@ -20,13 +33,17 @@ struct ContentView: View {
                     Label("Saved", systemImage: "bookmark")
                 }
             
-            QuoteView()
-                .tabItem {
-                    Label("Profile", systemImage: "person")
-                }
+            // Pass the data to QuoteView
+            if let quoteData = viewModel.quoteData {
+                QuoteView(quoteData: quoteData)
+                    .tabItem {
+                        Label("Profile", systemImage: "person")
+                    }
+            }
         }
     }
 }
+
 
 #Preview {
     ContentView()
