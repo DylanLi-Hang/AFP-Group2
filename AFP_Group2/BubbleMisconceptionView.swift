@@ -9,18 +9,18 @@ import SwiftUI
 let renderHeight =  (UIScreen.main.bounds.height) * 2
 let renderWidth = UIScreen.main.bounds.width
 
-
-
-struct BubbleIntersectionView: View {
+struct BubbleMisconceptionView: View {
     
     @State var stateManager = StateManager()
     @State private var isExploded = false
     private let explodingBits: Int = 75
     @State private var smashState = false
+    @State private var scrollOffset: CGFloat = 0.0
+    @State private var activateLink = false
 //    private let motionManager = CMMotionManager()
     
     @State private var bubbles: [Bubble] = []
-    private var people = ["wesley", "person", "AJ", "lauren", "fabian", "someone"]
+    private var people = ["peter goes into", "peter goes into", "peter goes into", "peter goes into", "peter goes into", "peter goes into"]
     private var colors: [Color] = [Color.red, Color.orange, Color.yellow, Color.green, Color.cyan, Color.blue, Color.purple, Color.pink, Color.red]
     
     init(stateManager: StateManager) {
@@ -33,19 +33,20 @@ struct BubbleIntersectionView: View {
                 ForEach(bubbles.indices, id: \.self) { index in
                     let bubble = bubbles[index]
                     Button(action: {
-                        stateManager.current = .bubbleView
-//                        stateManager.bubble = bubble
+                    stateManager.current = .bubbleView
                     }, label: {
                         ZStack {
-                            ForEach(0..<explodingBits, id: \.self) { _ in
-                                Circle()
-                                    .rotation(Angle(degrees: Double.random(in: 0..<360)))
-                                    .frame(width: 20, height: 20)
-                                    .foregroundColor(bubble.color)
-                                    .offset(x: isExploded ? (Double.random(in: -1...1) * 500) : 0, y: isExploded ? (Double.random(in: -1...1) * 500) : 0)
-                                    .opacity(isExploded ? 0 : 1)
-                                    .animation(.easeInOut.speed(0.6), value: isExploded)
-                                    .padding()
+                            if smashState{
+                                ForEach(0..<explodingBits, id: \.self) { _ in
+                                    Circle()
+                                        .rotation(Angle(degrees: Double.random(in: 0..<360)))
+                                        .frame(width: 20, height: 20)
+                                        .foregroundColor(bubble.color)
+                                        .offset(x: isExploded ? (Double.random(in: -1...1) * 500) : 0, y: isExploded ? (Double.random(in: -1...1) * 500) : 0)
+                                        .opacity(isExploded ? 0 : 1)
+                                        .animation(.easeInOut.speed(0.6), value: isExploded)
+                                        .padding()
+                                }
                             }
                             Circle()
                                 .fill(bubble.color)
@@ -53,49 +54,69 @@ struct BubbleIntersectionView: View {
                                 .opacity(isExploded ? 0 : 1)
                                 .animation(.easeInOut.speed(0.6), value: isExploded)
                                 .gesture(
-                                    DragGesture()
-                                        .onChanged { _ in
-                                            withAnimation {
-                                                isExploded.toggle()
+                                        DragGesture()
+                                            .onChanged { _ in
+                                                if smashState{
+                                                    withAnimation {
+                                                        isExploded.toggle()
+                                                    }
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                                       activateLink = true
+                                                                   }
+                                                }
+                                                if isExploded {
+                                                    // The view is disappearing after the explosion animation
+                                                    stateManager.current = .profile
+                                                }
                                             }
-                                        }
                                 )
                                 .onTapGesture {
                                     print("Button Pressed")
                                     // Set visibility to false for all bubbles except the tapped one
-                                        for i in bubbles.indices {
-                                            bubbles[i].visible = (bubbles[i] == bubble)
-                                        }
+                                    for i in bubbles.indices {
+                                        bubbles[i].visible = (bubbles[i] == bubble)
+                                    }
                                     // Smash State
-                                    smashState.toggle()
+                                    if bubble.radius < 150{
+                                        smashState.toggle()
+                                    }
                                     
                                     // Change Size
-                                    let centerY = geometry.frame(in: .local).midY
+                                    let centerY = geometry.frame(in: .global).midY
                                     handleClick(for: index, with: centerY)
                                 }
                             VStack {
-                                Image(systemName: "person")
-                                Text(bubble.text)
+                                Text(bubble.text).font(.title2)
                             }
                         }
                         .opacity(bubble.visible ? 1 : 0)
                     })
-                        .foregroundColor(.white)
-                        .position(bubble.position)
+                    .foregroundColor(.white)
+                    .position(bubble.position)
                 }
+                
             }
             .frame(width: renderWidth, height: renderHeight)
+            NavigationLink(destination: QuoteView(), isActive: $activateLink) {
+                EmptyView()
+                            }
+                            .hidden()
+                            .id(activateLink) // Add id for triggering the transition
+                            .transition(.opacity) // Apply the opacity transition
         }
         .background(.white)
+        .navigationBarBackButtonHidden(true)
 
     
         .onAppear {
+            // Reset smashState to false when navigating back
+            smashState = false
             bubbles = []
             // Include the sissconception array in here
             var index = 0
             for i in 0..<12 {
                 index = (index == 7) ? 0 : index + 1;
-                bubbles.append(Bubble(radius: 100, position: randomPosition(in: CGRect(x: 0, y: 0, width: renderWidth, height: renderHeight)), velocity: randomVelocity(), color: colors[index],text: people[i % 6], visible: true))
+                bubbles.append(Bubble(radius: 120, position: randomPosition(in: CGRect(x: 0, y: 0, width: renderWidth, height: renderHeight)), velocity: randomVelocity(), color: colors[index],text: people[i % 6], visible: true))
             }
             
             let timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { _ in
@@ -115,7 +136,7 @@ struct BubbleIntersectionView: View {
     }
 
     private func randomVelocity() -> CGVector {
-        let speed = CGFloat(1.5)
+        let speed = CGFloat(1)
         let angle = CGFloat.random(in: 0...(2 * .pi))
         return CGVector(dx: cos(angle) * speed, dy: sin(angle) * speed)
     }
@@ -196,12 +217,14 @@ struct BubbleIntersectionView: View {
             bubbles.indices.forEach { index in
                 if index == tappedIndex {
                 // Expand the clicked circle
-                    bubbles[index].radius *= 1.7
-                    
-                // Move the clicked circle to the center of the screen
-                let centerX = renderWidth / 2
-                let centerY = centerY
-                bubbles[index].position = CGPoint(x: centerX, y: centerY)
+                    if bubbles[index].radius < 150{
+                        bubbles[index].radius *= 1.7
+                        
+                        // Move the clicked circle to the center of the screen
+                        let centerX = renderWidth / 2
+                      //  let centerY = renderHeight / 5
+                        bubbles[index].position.x = centerX
+                    }
                 }
             }
         }
@@ -235,7 +258,7 @@ extension CGVector {
 }
 
 #Preview {
-    BubbleIntersectionView(stateManager: StateManager())
+    BubbleMisconceptionView(stateManager: StateManager())
 }
 
 
@@ -247,10 +270,18 @@ class StateManager {
     enum screen {
         case home
         case bubbleView
+        case profile
     }
     
 //    var bubble = Bubble(radius: 100, position: CGPoint() , velocity: CGVector(dx:1, dy:1), color: .black, text: "error", visible: true)
     
     var current: screen = screen.home
 
+}
+
+class YourScrollViewDelegate: NSObject, UIScrollViewDelegate {
+    func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        // Return true to enable scrolling to the top
+        return true
+    }
 }
