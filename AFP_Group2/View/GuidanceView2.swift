@@ -36,9 +36,8 @@ struct GuidanceView2: View {
                 HStack {
                     
                     VStack {
-                        Image(systemName: "iphone.homebutton.radiowaves.left.and.right")
-                            .resizable()
-                            .frame(width: 120, height: 100)
+                        LottieView(name: "shake", loopMode: .loop)
+                            .frame(width: 150, height: 150, alignment: .center)
                         Text("Shake")
                             .font(.title)
                     }
@@ -46,9 +45,8 @@ struct GuidanceView2: View {
 
                     VStack {
                         
-                        Image(systemName: "scissors.badge.ellipsis")
-                            .resizable()
-                            .frame(width: 120, height: 100)
+                        LottieView(name: "slice", loopMode: .loop)
+                            .frame(width: 150, height: 150, alignment: .center)
                         
                         Text("or slice")
                             .font(.title)

@@ -7,12 +7,17 @@
 
 import SwiftUI
 
+import Lottie
+
 struct ShakeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LottieView(name: "shake", loopMode: .loop)
+            .frame(width: 100, height: 100, alignment: .center)
     }
 }
 
-#Preview {
-    ShakeView()
+struct ShakeView_Previews: PreviewProvider {
+    static var previews: some View {
+        ShakeView()
+    }
 }

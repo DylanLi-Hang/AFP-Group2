@@ -7,12 +7,17 @@
 
 import SwiftUI
 
+import Lottie
+
 struct SliceView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LottieView(name: "slice", loopMode: .loop)
+            .frame(width: 100, height: 100, alignment: .center)
     }
 }
 
-#Preview {
-    SliceView()
+struct SliceView_Previews: PreviewProvider {
+    static var previews: some View {
+        SliceView()
+    }
 }
