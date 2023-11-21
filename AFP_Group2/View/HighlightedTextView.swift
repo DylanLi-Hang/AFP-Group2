@@ -12,10 +12,14 @@ private struct HighlightedText: View {
     var highlighted: String
 
     var body: some View {
-        Text(attributedString(text: text, highlighted: highlighted, backgroundColor: .yellow, foregroundColor: .red))
+        Text(attributedString(text: text, highlighted: highlighted, backgroundColor: .redish, foregroundColor: .white))
+            
             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             .bold()
+            .frame(width: 500, height: 1000)
+            .background(.yellowish)
     }
+        
 
 }
 
@@ -25,6 +29,7 @@ private func attributedString(text: String, highlighted: String, backgroundColor
     if let range = attributedString.range(of: highlighted) {
         attributedString[range].backgroundColor = backgroundColor
         attributedString[range].foregroundColor = foregroundColor
+        
     }
     return attributedString
 }

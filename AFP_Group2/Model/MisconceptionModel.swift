@@ -14,6 +14,8 @@ struct MisconceptionModel: Codable {
     let citation: String
     let career: String?
     let videoFileName: String
+    let backgroundColor: String
+    let highlightColor: String
 
     enum CodingKeys: String, CodingKey {
         case misconception = "Misconception"
@@ -22,5 +24,7 @@ struct MisconceptionModel: Codable {
         case citation = "Citation"
         case career = "Career"
         case videoFileName = "Video file name"
+        case backgroundColor = "BackgroundColor"
+        case highlightColor = "HighlightColor"
     }
 }
