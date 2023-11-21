@@ -9,7 +9,7 @@ import SwiftUI
 
 import SwiftUI
 
-struct TestView: View {
+struct TestJsonView: View {
     var body: some View {
         NavigationView {
             List(misconceptions, id: \.citation) { item in
@@ -40,5 +40,5 @@ struct TestView: View {
 
 
 #Preview {
-    TestView()
+    TestJsonView()
 }

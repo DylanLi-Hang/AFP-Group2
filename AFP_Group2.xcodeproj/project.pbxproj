@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		054635C82B07196700011989 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		05CD9C122B0B0202007C0BF7 /* BubbleMisconceptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */; };
+		05CD9C162B0C1E12007C0BF7 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD9C152B0C1E12007C0BF7 /* TestView.swift */; };
+		5B0A1ACB2B0705FD00D94D49 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		B62A45782B0C282100AD482A /* GuidanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62A45772B0C282100AD482A /* GuidanceView.swift */; };
+		B62A457A2B0C2AC100AD482A /* GuidanceView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62A45792B0C2AC100AD482A /* GuidanceView2.swift */; };
+		B63B82532B0C61E000F3F37B /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B82522B0C61E000F3F37B /* ShakeView.swift */; };
+		B63B82552B0C61F000F3F37B /* SliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B82542B0C61F000F3F37B /* SliceView.swift */; };
 		FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */; };
 		FC0228E42B06F99200BCC14C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		FC0228E62B06F99400BCC14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0228E52B06F99400BCC14C /* Assets.xcassets */; };
@@ -26,11 +32,19 @@
 		FC2A24BC2B0B1CE5006F81FF /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24BB2B0B1CE5006F81FF /* TapView.swift */; };
 		FC2A24BE2B0B1CFF006F81FF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */; };
 		FC2A24C02B0B2156006F81FF /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24BF2B0B2156006F81FF /* QuoteView.swift */; };
-		FC646FF12B0CE1A5004807D0 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC646FF02B0CE1A5004807D0 /* TestView.swift */; };
+		FC646FF12B0CE1A5004807D0 /* TestJsonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC646FF02B0CE1A5004807D0 /* TestJsonView.swift */; };
+		FCC893CC2B0D71CF00912CDA /* slice.json in Resources */ = {isa = PBXBuildFile; fileRef = FCC893CA2B0D71CF00912CDA /* slice.json */; };
+		FCC893CD2B0D71CF00912CDA /* shake.json in Resources */ = {isa = PBXBuildFile; fileRef = FCC893CB2B0D71CF00912CDA /* shake.json */; };
 		FCE289522B0729500073CAF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE289502B0729500073CAF1 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BubbleMisconceptionView.swift; path = AFP_Group2/BubbleMisconceptionView.swift; sourceTree = SOURCE_ROOT; };
+		05CD9C152B0C1E12007C0BF7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		B62A45772B0C282100AD482A /* GuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceView.swift; sourceTree = "<group>"; };
+		B62A45792B0C2AC100AD482A /* GuidanceView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceView2.swift; sourceTree = "<group>"; };
+		B63B82522B0C61E000F3F37B /* ShakeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
+		B63B82542B0C61F000F3F37B /* SliceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceView.swift; sourceTree = "<group>"; };
 		FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFP_Group2App.swift; sourceTree = "<group>"; };
 		FC0228E52B06F99400BCC14C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0228E82B06F99400BCC14C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -48,7 +62,9 @@
 		FC2A24BB2B0B1CE5006F81FF /* TapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
 		FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		FC2A24BF2B0B2156006F81FF /* QuoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
-		FC646FF02B0CE1A5004807D0 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		FC646FF02B0CE1A5004807D0 /* TestJsonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJsonView.swift; sourceTree = "<group>"; };
+		FCC893CA2B0D71CF00912CDA /* slice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = slice.json; sourceTree = "<group>"; };
+		FCC893CB2B0D71CF00912CDA /* shake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shake.json; sourceTree = "<group>"; };
 		FCE289502B0729500073CAF1 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +100,6 @@
 			children = (
 				FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */,
 				FCE289502B0729500073CAF1 /* ContentView.swift */,
-				FC646FF02B0CE1A5004807D0 /* TestView.swift */,
 				FC0228F02B06FF6800BCC14C /* View */,
 				FC0228EF2B06FF5700BCC14C /* Model */,
 				FC0228F32B070DB800BCC14C /* Resources */,
@@ -115,13 +130,20 @@
 			isa = PBXGroup;
 			children = (
 				FC0B388B2B0C1DC2005ECC61 /* Icons.swift */,
+				B62A45772B0C282100AD482A /* GuidanceView.swift */,
+				B62A45792B0C2AC100AD482A /* GuidanceView2.swift */,
 				FC2A24BF2B0B2156006F81FF /* QuoteView.swift */,
+				B63B82522B0C61E000F3F37B /* ShakeView.swift */,
+				B63B82542B0C61F000F3F37B /* SliceView.swift */,
 				FC2A24BB2B0B1CE5006F81FF /* TapView.swift */,
 				FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */,
 				FC2A24B92B0B1CCF006F81FF /* VideoSwipingView.swift */,
 				FC0A27032B0A37180082F899 /* BottleView.swift */,
 				FC0A27072B0ACDB80082F899 /* CollectStarView.swift */,
 				FC0B388D2B0C2D95005ECC61 /* HighlightedTextView.swift */,
+				05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */,
+				FC646FF02B0CE1A5004807D0 /* TestJsonView.swift */,
+				05CD9C152B0C1E12007C0BF7 /* TestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +151,8 @@
 		FC0228F32B070DB800BCC14C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCC893CB2B0D71CF00912CDA /* shake.json */,
+				FCC893CA2B0D71CF00912CDA /* slice.json */,
 				FC0B38432B0B7F47005ECC61 /* data.json */,
 				FC0B38942B0C76C7005ECC61 /* Misconceptions.xlsx */,
 				FC0B38412B0B7EC0005ECC61 /* convert.py */,
@@ -202,6 +226,8 @@
 			files = (
 				FC0228E92B06F99400BCC14C /* Preview Assets.xcassets in Resources */,
 				FC0228E62B06F99400BCC14C /* Assets.xcassets in Resources */,
+				FCC893CC2B0D71CF00912CDA /* slice.json in Resources */,
+				FCC893CD2B0D71CF00912CDA /* shake.json in Resources */,
 				FC0B38422B0B7EC0005ECC61 /* convert.py in Resources */,
 				FC0B38442B0B7F47005ECC61 /* data.json in Resources */,
 				FC2A24B82B0B1CC3006F81FF /* tap.json in Resources */,
@@ -217,14 +243,21 @@
 			files = (
 				FC0228E42B06F99200BCC14C /* (null) in Sources */,
 				FC2A24BC2B0B1CE5006F81FF /* TapView.swift in Sources */,
-				054635C82B07196700011989 /* (null) in Sources */,
+				5B0A1ACB2B0705FD00D94D49 /* (null) in Sources */,
+				FC0228E42B06F99200BCC14C /* (null) in Sources */,
+				05CD9C162B0C1E12007C0BF7 /* TestView.swift in Sources */,
+				05CD9C122B0B0202007C0BF7 /* BubbleMisconceptionView.swift in Sources */,
 				FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */,
 				FCE289522B0729500073CAF1 /* ContentView.swift in Sources */,
 				FC0B388E2B0C2D95005ECC61 /* HighlightedTextView.swift in Sources */,
 				FC2A24BA2B0B1CCF006F81FF /* VideoSwipingView.swift in Sources */,
+				B63B82552B0C61F000F3F37B /* SliceView.swift in Sources */,
 				FC0A27082B0ACDB80082F899 /* CollectStarView.swift in Sources */,
-				FC646FF12B0CE1A5004807D0 /* TestView.swift in Sources */,
+				FC646FF12B0CE1A5004807D0 /* TestJsonView.swift in Sources */,
 				FC0B38482B0B94A2005ECC61 /* DataModel.swift in Sources */,
+				B62A457A2B0C2AC100AD482A /* GuidanceView2.swift in Sources */,
+				B63B82532B0C61E000F3F37B /* ShakeView.swift in Sources */,
+				B62A45782B0C282100AD482A /* GuidanceView.swift in Sources */,
 				FC0B388C2B0C1DC2005ECC61 /* Icons.swift in Sources */,
 				FC2A24C02B0B2156006F81FF /* QuoteView.swift in Sources */,
 				FC0A27042B0A37180082F899 /* BottleView.swift in Sources */,

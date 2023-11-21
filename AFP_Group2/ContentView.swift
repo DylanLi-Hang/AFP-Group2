@@ -1,19 +1,15 @@
-//
-//  ContentView.swift
-//  AFP_Group2
-//
-//  Created by Dylan on 17/11/2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        TabView {
-            TapView()
-                .tabItem {
-                    Label("Home", systemImage: "circle.hexagongrid.fill")
-                }
+        TabView() {
+            NavigationView {
+                BubbleMisconceptionView(stateManager: StateManager())
+            }
+            .tabItem {
+                Label("Home", systemImage: "circle.hexagongrid.fill")
+            }
             
             CollectStarView()
                 .tabItem {
@@ -24,10 +20,13 @@ struct ContentView: View {
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
+                .tag(".profile")
         }
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
