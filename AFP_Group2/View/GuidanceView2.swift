@@ -9,10 +9,35 @@ import SwiftUI
 
 struct GuidanceView2: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            
+            // Background color
+            Color(.systemBackground).edgesIgnoringSafeArea(.all)
+            
+            // Overlayed focused yellow circle and text
+            VStack {
+                
+                Spacer()
+                
+                Circle()
+                    .fill(Color.yellow.opacity(0.3))
+                    .frame(width: 250, height: 250)
+                    .overlay(
+                    Text("Text...")
+                        .font(.caption.bold())
+                    .foregroundColor(.black)
+                    )
+                    .padding(.bottom, 50)
+                
+                Spacer()
+                
+            }
+        }
     }
 }
 
-#Preview {
-    GuidanceView2()
+struct GuidanceView2_Previews: PreviewProvider {
+    static var previews: some View {
+        GuidanceView2()
+    }
 }
