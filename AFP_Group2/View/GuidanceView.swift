@@ -10,10 +10,9 @@ import SwiftUI
 struct GuidanceView: View {
     var body: some View {
         ZStack {
+            
             // Background color
             Color(.systemBackground).edgesIgnoringSafeArea(.all)
-            
-            
             
             // Overlayed focused yellow circle and text
             VStack {
@@ -47,6 +46,8 @@ struct GuidanceView: View {
     }
 }
 
-#Preview {
-    GuidanceView()
+struct GuidanceView_Previews: PreviewProvider {
+    static var previews: some View {
+        GuidanceView()
+    }
 }
