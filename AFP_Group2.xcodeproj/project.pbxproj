@@ -30,7 +30,7 @@
 		FC2A24BC2B0B1CE5006F81FF /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24BB2B0B1CE5006F81FF /* TapView.swift */; };
 		FC2A24BE2B0B1CFF006F81FF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */; };
 		FC2A24C02B0B2156006F81FF /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24BF2B0B2156006F81FF /* QuoteView.swift */; };
-		FC646FF12B0CE1A5004807D0 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC646FF02B0CE1A5004807D0 /* TestView.swift */; };
+		FC646FF12B0CE1A5004807D0 /* TestJsonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC646FF02B0CE1A5004807D0 /* TestJsonView.swift */; };
 		FCE289522B0729500073CAF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE289502B0729500073CAF1 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,7 @@
 		FC2A24BB2B0B1CE5006F81FF /* TapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
 		FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		FC2A24BF2B0B2156006F81FF /* QuoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
-		FC646FF02B0CE1A5004807D0 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		FC646FF02B0CE1A5004807D0 /* TestJsonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestJsonView.swift; sourceTree = "<group>"; };
 		FCE289502B0729500073CAF1 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,6 @@
 			children = (
 				FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */,
 				FCE289502B0729500073CAF1 /* ContentView.swift */,
-				FC646FF02B0CE1A5004807D0 /* TestView.swift */,
 				FC0228F02B06FF6800BCC14C /* View */,
 				FC0228EF2B06FF5700BCC14C /* Model */,
 				FC0228F32B070DB800BCC14C /* Resources */,
@@ -133,6 +132,7 @@
 				FC0A27072B0ACDB80082F899 /* CollectStarView.swift */,
 				FC0B388D2B0C2D95005ECC61 /* HighlightedTextView.swift */,
 				05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */,
+				FC646FF02B0CE1A5004807D0 /* TestJsonView.swift */,
 				05CD9C152B0C1E12007C0BF7 /* TestView.swift */,
 			);
 			path = View;
@@ -238,7 +238,7 @@
 				FC0B388E2B0C2D95005ECC61 /* HighlightedTextView.swift in Sources */,
 				FC2A24BA2B0B1CCF006F81FF /* VideoSwipingView.swift in Sources */,
 				FC0A27082B0ACDB80082F899 /* CollectStarView.swift in Sources */,
-				FC646FF12B0CE1A5004807D0 /* TestView.swift in Sources */,
+				FC646FF12B0CE1A5004807D0 /* TestJsonView.swift in Sources */,
 				FC0B38482B0B94A2005ECC61 /* DataModel.swift in Sources */,
 				FC0B388C2B0C1DC2005ECC61 /* Icons.swift in Sources */,
 				FC0228F72B07122700BCC14C /* RolemodelModel.swift in Sources */,
