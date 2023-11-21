@@ -21,11 +21,13 @@ struct GuidanceView2: View {
                 
                 Circle()
                     .fill(Color.yellow.opacity(0.3))
-                    .frame(width: 250, height: 250)
+                    .frame(width: 280, height: 280)
                     .overlay(
-                    Text("Text...")
-                        .font(.caption.bold())
+                    Text("Women are not good at coding")
+                        .font(.title2)
                     .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 150, height: 200, alignment: .center)
                     )
                     .padding(.bottom, 50)
                 

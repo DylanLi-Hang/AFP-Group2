@@ -18,7 +18,7 @@ struct GuidanceView: View {
             VStack {
                 Spacer()
                 
-                Text("Choose your concern")
+                Text("Choose a stereotype")
                     .font(.title)
                     .padding(.bottom, 50)
                 
@@ -26,9 +26,11 @@ struct GuidanceView: View {
                     .fill(Color.yellow.opacity(0.3))
                     .frame(width: 200, height: 200)
                     .overlay(
-                    Text("I'm not good at coding")
-                        .font(.caption.bold())
+                    Text("Women are not good at coding")
+                        .font(.headline.bold())
                     .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 100, height: 100, alignment: .center)
                     )
                     .padding(.bottom, 50)
                                 
