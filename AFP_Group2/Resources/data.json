@@ -2,6 +2,7 @@
     {
         "Misconception":"IT Careers are not creative",
         "Quote \/ Fact":"\"When I staterd workin on Computer Science I realized how creative, social and fun it was, how you could build things and create things that people all over the world could use. if you could change technology, you could change the world.\"",
+        "Highlight":"Computer Science",
         "Citation":"Susan Wojcicki",
         "Career":"CEO of YouTube",
         "Video file name":"video1"
@@ -9,6 +10,7 @@
     {
         "Misconception":"Men are better than women in sciences",
         "Quote \/ Fact":"\"Certain people \u2013 men, of course \u2013 discouraged me, saying [science] was not a good career for women. That pushed me even more to persevere.\"",
+        "Highlight":null,
         "Citation":"Francoise Barre",
         "Career":"Nobel Prize in Physiology and Medicine",
         "Video file name":"video2"
@@ -16,6 +18,7 @@
     {
         "Misconception":"Women often fail in IT careers",
         "Quote \/ Fact":"\"You should never view your challenges as a disadvantage. Instead, it\u2019s important for you to understand that your experience facing and overcoming adversity is actually one of your biggest advantages\"",
+        "Highlight":null,
         "Citation":"Michelle Obama",
         "Career":null,
         "Video file name":"video3"
@@ -23,6 +26,7 @@
     {
         "Misconception":"Women aren't smart enough for a career in IT",
         "Quote \/ Fact":"\"I think it\u2019s very important to get more women into computing. My slogan is: computing is too important to be left to men\" ",
+        "Highlight":null,
         "Citation":"Karen Sparck Jones",
         "Career":"Professor at the Cambridge Computer Laboratory",
         "Video file name":"video4"
@@ -30,6 +34,7 @@
     {
         "Misconception":"Women aren't good at coding",
         "Quote \/ Fact":"\u201cThat brain of mine is something more than merely mortal; as time will show.\u201d",
+        "Highlight":null,
         "Citation":"Ada Lovelace",
         "Career":"First computer programmer",
         "Video file name":"video5"
@@ -37,13 +42,15 @@
     {
         "Misconception":"Women aren't likely to get leadership in the IT industry",
         "Quote \/ Fact":"\u201cWomen no longer have an \u2018if I can\u2019 mindset. Now it\u2019s more about \u2018how I can\u2019\u2014 be in tech, start something in tech, fund something in tech. That shift is exciting! And it happened because we created a network where we show, daily, that women are innovating.\u201d",
+        "Highlight":null,
         "Citation":"Shaherose Charania",
         "Career":"Tech entrepreneur",
         "Video file name":"video6"
     },
     {
-        "Misconception":"Most people work in IT are male",
+        "Misconception":"Most people that work in IT are male",
         "Quote \/ Fact":"\u201cRecognize and embrace your uniqueness...Being a Black woman, being a woman in general, on a team of all men, means that you are going to have a unique voice. It\u2019s important to embrace that.\u201d",
+        "Highlight":null,
         "Citation":"Erin Teague",
         "Career":"Director of Product Management at YouTube",
         "Video file name":"video7"
@@ -51,6 +58,7 @@
     {
         "Misconception":"Women aren't taken seriously in the IT industry",
         "Quote \/ Fact":"\"Imagine what our world would look like if every young person, regardless of gender, ethnicity, or background, felt inspired to enter the tech field. The future belongs to those who dare to dream, and in tech, your dreams can shape the world.\"",
+        "Highlight":null,
         "Citation":"Melinda Gates",
         "Career":"Co-founder of the Bill & Melinda Gates Foundation",
         "Video file name":"video8"
@@ -58,6 +66,7 @@
     {
         "Misconception":"Workplace culture can feel excluding for women",
         "Quote \/ Fact":"\"Companies with inclusive cultures tend to be more successful. A study by McKinsey found that organizations with diverse leadership are 33% more likely to outperform their peers in profitability.\"",
+        "Highlight":null,
         "Citation":"Diversity wins by McKinsey & Company",
         "Career":null,
         "Video file name":"video9"
@@ -65,6 +74,7 @@
     {
         "Misconception":"Women get less opportunities than men",
         "Quote \/ Fact":"\u201cLife doesn\u2019t always present you with the perfect opportunity at the perfect time. Opportunities come when you least expect them, or when you\u2019re not ready for them. Rarely are opportunities presented to you in the perfect way, in a nice little box with a yellow bow on top. Opportunities, the good ones, they\u2019re messy and confusing and hard to recognize. They\u2019re risky. They challenge you.\u201d",
+        "Highlight":null,
         "Citation":"Susan Wojcicki",
         "Career":"CEO of YouTube",
         "Video file name":"video10"
@@ -72,6 +82,7 @@
     {
         "Misconception":"There aren't many female role models in the IT industry",
         "Quote \/ Fact":"\u201cThe word \u2018female,\u2019 when inserted in front of something, is always with a note of surprise. Female COO, female pilot, female surgeon \u2014 as if the gender implies surprise ... One day there won\u2019t be female leaders. There will just be leaders.\u201d",
+        "Highlight":null,
         "Citation":"Sheryl Sandberg",
         "Career":"COO of Facebook and Founder of Leanin.org",
         "Video file name":"video11"
@@ -79,6 +90,7 @@
     {
         "Misconception":"Women are not good at IT",
         "Quote \/ Fact":"\"It's not that women don't want to be engineers, it's that they've been told it's not for them. We have to tell them it is for them, and we have to show them that it's for them.\"",
+        "Highlight":null,
         "Citation":"Megan Smith",
         "Career":"Third Chief Technology Officer of the United States",
         "Video file name":"video12"
@@ -86,6 +98,7 @@
     {
         "Misconception":"Women are held up to different standards than men",
         "Quote \/ Fact":"\u201cIt\u2019s so easy for us to get caught up in negative patterns, versus seeing what positive change you can make. Especially for women and minorities, we need to learn to see challenges as stepping stones instead of hurdles. They really can bring you experience and closer to your goals.\u201d",
+        "Highlight":null,
         "Citation":"Rebecca Garcia",
         "Career":"Computer Programmer and 2016 Hispanic STEM Star",
         "Video file name":"video13"
@@ -93,6 +106,7 @@
     {
         "Misconception":"Women frequently experience being interrupted or talked over in professional settings",
         "Quote \/ Fact":"\u201cI didn\u2019t learn to be quiet when I had an opinion. The reason they knew who I was is because I told them.\u201d",
+        "Highlight":null,
         "Citation":"Ursula Burn",
         "Career":"CEO of Xerox",
         "Video file name":"video14"
