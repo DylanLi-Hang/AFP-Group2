@@ -24,9 +24,7 @@ struct CollectStarView: View {
                 .offset(y:120)
             BottleView(isHighlighted: false)
                 .offset(y:140)
-            
-            Text(attributedString(text: "This is bottle", highlighted: "bottle"))
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+
         }
         
     }

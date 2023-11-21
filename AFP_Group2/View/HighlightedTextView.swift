@@ -12,20 +12,23 @@ private struct HighlightedText: View {
     var highlighted: String
 
     var body: some View {
-        Text(attributedString(text: text, highlighted: highlighted))
+        Text(attributedString(text: text, highlighted: highlighted, backgroundColor: .yellow, foregroundColor: .red))
+            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            .bold()
     }
 
 }
 
-public func attributedString(text: String, highlighted: String) -> AttributedString {
+private func attributedString(text: String, highlighted: String, backgroundColor: UIColor, foregroundColor: UIColor) -> AttributedString {
     var attributedString = AttributedString(text)
 
     if let range = attributedString.range(of: highlighted) {
-        attributedString[range].backgroundColor = .yellow
-        attributedString[range].foregroundColor = .blue
+        attributedString[range].backgroundColor = backgroundColor
+        attributedString[range].foregroundColor = foregroundColor
     }
     return attributedString
 }
+
 
 #Preview {
     HighlightedText(text: "Hello", highlighted: "el")
