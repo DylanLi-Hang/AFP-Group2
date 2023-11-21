@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		054635C82B07196700011989 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		05CD9C122B0B0202007C0BF7 /* BubbleMisconceptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */; };
+		05CD9C162B0C1E12007C0BF7 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD9C152B0C1E12007C0BF7 /* TestView.swift */; };
+		5B0A1ACB2B0705FD00D94D49 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */; };
 		FC0228E42B06F99200BCC14C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		FC0228E62B06F99400BCC14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0228E52B06F99400BCC14C /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BubbleMisconceptionView.swift; path = AFP_Group2/BubbleMisconceptionView.swift; sourceTree = SOURCE_ROOT; };
+		05CD9C152B0C1E12007C0BF7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFP_Group2App.swift; sourceTree = "<group>"; };
 		FC0228E52B06F99400BCC14C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0228E82B06F99400BCC14C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				FC0A27032B0A37180082F899 /* BottleView.swift */,
 				FC0A27072B0ACDB80082F899 /* CollectStarView.swift */,
 				FC0B388D2B0C2D95005ECC61 /* HighlightedTextView.swift */,
+				05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */,
+				05CD9C152B0C1E12007C0BF7 /* TestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,7 +229,10 @@
 			files = (
 				FC0228E42B06F99200BCC14C /* (null) in Sources */,
 				FC2A24BC2B0B1CE5006F81FF /* TapView.swift in Sources */,
-				054635C82B07196700011989 /* (null) in Sources */,
+				5B0A1ACB2B0705FD00D94D49 /* (null) in Sources */,
+				FC0228E42B06F99200BCC14C /* (null) in Sources */,
+				05CD9C162B0C1E12007C0BF7 /* TestView.swift in Sources */,
+				05CD9C122B0B0202007C0BF7 /* BubbleMisconceptionView.swift in Sources */,
 				FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */,
 				FCE289522B0729500073CAF1 /* ContentView.swift in Sources */,
 				FC0B388E2B0C2D95005ECC61 /* HighlightedTextView.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct QuoteView: View {
+
     var body: some View {
         ZStack {
             Color("redish").ignoresSafeArea()
