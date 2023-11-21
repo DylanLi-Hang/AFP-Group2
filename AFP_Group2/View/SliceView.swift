@@ -12,7 +12,7 @@ import Lottie
 struct SliceView: View {
     var body: some View {
         LottieView(name: "slice", loopMode: .loop)
-            .frame(width: 100, height: 100, alignment: .center)
+            .frame(width: 200, height: 200, alignment: .center)
     }
 }
 
