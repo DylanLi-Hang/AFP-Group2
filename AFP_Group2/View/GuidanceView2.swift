@@ -33,6 +33,29 @@ struct GuidanceView2: View {
                 
                 Spacer()
                 
+                HStack {
+                    
+                    VStack {
+                        Image(systemName: "iphone.homebutton.radiowaves.left.and.right")
+                            .resizable()
+                            .frame(width: 120, height: 100)
+                        Text("Shake")
+                            .font(.title)
+                    }
+                        .padding(.bottom, 50)
+
+                    VStack {
+                        
+                        Image(systemName: "scissors.badge.ellipsis")
+                            .resizable()
+                            .frame(width: 120, height: 100)
+                        
+                        Text("or slice")
+                            .font(.title)
+                    }
+                        .padding(.bottom, 50)
+                }
+                
             }
         }
     }
