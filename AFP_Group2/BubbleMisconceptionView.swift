@@ -5,24 +5,25 @@
 //  Created by Fabian Roth on 20/11/2023.
 //
 import SwiftUI
-
+import CoreMotion
 let renderHeight =  (UIScreen.main.bounds.height) * 2
 let renderWidth = UIScreen.main.bounds.width
 
+
 struct BubbleMisconceptionView: View {
-    
+    private let motionManager = CMMotionManager()
     @State var stateManager = StateManager()
     @State private var isExploded = false
     private let explodingBits: Int = 75
     @State private var smashState = false
     @State private var scrollOffset: CGFloat = 0.0
     @State private var activateLink = false
-//    private let motionManager = CMMotionManager()
+    @State private var speed = CGFloat(1)
+    @State private var timer: Timer?;
+    
     
     @State private var bubbles: [Bubble] = []
-    private var people = ["peter goes into", "peter goes into", "peter goes into", "peter goes into", "peter goes into", "peter goes into"]
-    private var colors: [Color] = [Color.red, Color.orange, Color.yellow, Color.green, Color.cyan, Color.blue, Color.purple, Color.pink, Color.red]
-    
+
     init(stateManager: StateManager) {
         self.stateManager = stateManager
     }
@@ -41,7 +42,7 @@ struct BubbleMisconceptionView: View {
                                     Circle()
                                         .rotation(Angle(degrees: Double.random(in: 0..<360)))
                                         .frame(width: 20, height: 20)
-                                        .foregroundColor(bubble.color)
+                                        .foregroundColor(Color(bubble.color))
                                         .offset(x: isExploded ? (Double.random(in: -1...1) * 500) : 0, y: isExploded ? (Double.random(in: -1...1) * 500) : 0)
                                         .opacity(isExploded ? 0 : 1)
                                         .animation(.easeInOut.speed(0.6), value: isExploded)
@@ -49,7 +50,7 @@ struct BubbleMisconceptionView: View {
                                 }
                             }
                             Circle()
-                                .fill(bubble.color)
+                                .fill(Color(bubble.color))
                                 .frame(width: isExploded ? bubble.radius * 10 : bubble.radius * 2, height: isExploded ? bubble.radius * 10 : bubble.radius * 2)
                                 .opacity(isExploded ? 0 : 1)
                                 .animation(.easeInOut.speed(0.6), value: isExploded)
@@ -104,22 +105,14 @@ struct BubbleMisconceptionView: View {
                             .id(activateLink) // Add id for triggering the transition
                             .transition(.opacity) // Apply the opacity transition
         }
-        .background(.white)
         .navigationBarBackButtonHidden(true)
-
-    
+        .background(.white)    
         .onAppear {
-            // Reset smashState to false when navigating back
-            smashState = false
-            bubbles = []
-            // Include the sissconception array in here
-            var index = 0
-            for i in 0..<12 {
-                index = (index == 7) ? 0 : index + 1;
-                bubbles.append(Bubble(radius: 120, position: randomPosition(in: CGRect(x: 0, y: 0, width: renderWidth, height: renderHeight)), velocity: randomVelocity(), color: colors[index],text: people[i % 6], visible: true))
-            }
-            
-            let timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { _ in
+            // (Re)create Bubble Array
+            timer?.invalidate()
+            recreateBubblesArray();
+            speed = CGFloat(1)
+            timer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { _ in
                 withAnimation {
                     if !smashState{
                         updateBubblesPositions(in: CGRect(x: 0, y: 0, width: renderWidth, height: renderHeight))
@@ -127,16 +120,22 @@ struct BubbleMisconceptionView: View {
                         
                 }
             }
-            RunLoop.main.add(timer, forMode: .common)
+            if let timer = timer {
+                RunLoop.main.add(timer, forMode: .common)
+            }            
+            
+            startMotionManager()
+        }
+        .onDisappear {
+                    timer?.invalidate()
         }
     }
 
     private func randomPosition(in bounds: CGRect) -> CGPoint {
-        return CGPoint(x: CGFloat.random(in: 0...(bounds.width - 50)), y: CGFloat.random(in: 0...(bounds.height - 50)))
+        return CGPoint(x: CGFloat.random(in: 0...(bounds.width - 100)), y: CGFloat.random(in: 0...(bounds.height - 100)))
     }
 
     private func randomVelocity() -> CGVector {
-        let speed = CGFloat(1)
         let angle = CGFloat.random(in: 0...(2 * .pi))
         return CGVector(dx: cos(angle) * speed, dy: sin(angle) * speed)
     }
@@ -229,13 +228,62 @@ struct BubbleMisconceptionView: View {
             }
         }
     }
+    
+    private func recreateBubblesArray() {
+            isExploded = false
+            activateLink = false
+            smashState = false
+            bubbles = []
+
+            for index in 0..<misconceptions.count {
+                let item = misconceptions[index]
+
+                bubbles.append(Bubble(
+                    radius: 120,
+                    position: randomPosition(in: CGRect(x: 0, y: 0, width: renderWidth, height: renderHeight)),
+                    velocity: randomVelocity(),
+                    color: UIColor[item.backgroundColor],
+                    text: item.misconception,
+                    visible: true
+                ))
+            }
+            //print("Bubbles Array : >> \(bubbles)")
+            print("Activate Link >>: \(activateLink)")
+            print("Smash State >>: \(smashState)")
+            print("Is Exploded >>:\(isExploded)")
+            print("Bubble Count : >> \(bubbles.count)")
+        }
+    
+    private func startMotionManager() {
+        if motionManager.isDeviceMotionAvailable {
+            motionManager.deviceMotionUpdateInterval = 0.1
+            motionManager.startDeviceMotionUpdates(to: .main) { (data, error) in
+                if let acceleration = data?.userAcceleration {
+                    if acceleration.x > 2.0 || acceleration.y > 2.0 || acceleration.z > 2.0 {
+                    }
+                }
+            }
+        }
+        if smashState{
+            withAnimation {
+                isExploded.toggle()
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                               activateLink = true
+                           }
+        }
+    }
+    
+    private func stopMotionManager() {
+        motionManager.stopDeviceMotionUpdates()
+    }
 }
 
 struct Bubble: Equatable {
     var radius: CGFloat = 200.0
     var position: CGPoint
     var velocity: CGVector
-    var color: Color
+    var color: UIColor
     var text: String
     var visible: Bool
 }
