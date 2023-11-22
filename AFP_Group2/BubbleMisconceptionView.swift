@@ -5,12 +5,13 @@
 //  Created by Fabian Roth on 20/11/2023.
 //
 import SwiftUI
-
+import CoreMotion
 let renderHeight =  (UIScreen.main.bounds.height) * 2
 let renderWidth = UIScreen.main.bounds.width
 
+
 struct BubbleMisconceptionView: View {
-    
+    private let motionManager = CMMotionManager()
     @State var stateManager = StateManager()
     @State private var isExploded = false
     private let explodingBits: Int = 75
@@ -19,9 +20,10 @@ struct BubbleMisconceptionView: View {
     @State private var activateLink = false
 //    private let motionManager = CMMotionManager()
     
+    
     @State private var bubbles: [Bubble] = []
     private var people = ["peter goes into", "peter goes into", "peter goes into", "peter goes into", "peter goes into", "peter goes into"]
-    private var colors: [Color] = [Color.red, Color.orange, Color.yellow, Color.green, Color.cyan, Color.blue, Color.purple, Color.pink, Color.red]
+    private var colors: [Color] = [Color.yellowish, Color.blueish, Color.pinkish, Color.purpleish, Color.redish, Color.yellowish, Color.blueish, Color.pinkish, Color.purpleish]
     
     init(stateManager: StateManager) {
         self.stateManager = stateManager
@@ -128,6 +130,9 @@ struct BubbleMisconceptionView: View {
                 }
             }
             RunLoop.main.add(timer, forMode: .common)
+            
+            
+            startMotionManager()
         }
     }
 
@@ -228,6 +233,25 @@ struct BubbleMisconceptionView: View {
                 }
             }
         }
+    }
+    
+    private func startMotionManager() {
+        if motionManager.isDeviceMotionAvailable {
+            motionManager.deviceMotionUpdateInterval = 0.1
+            motionManager.startDeviceMotionUpdates(to: .main) { (data, error) in
+                if let acceleration = data?.userAcceleration {
+                    if acceleration.x > 2.0 || acceleration.y > 2.0 || acceleration.z > 2.0 {
+                        withAnimation {
+                            isExploded.toggle()
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    private func stopMotionManager() {
+        motionManager.stopDeviceMotionUpdates()
     }
 }
 
