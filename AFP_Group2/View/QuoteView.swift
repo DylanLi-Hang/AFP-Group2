@@ -8,25 +8,12 @@
 import SwiftUI
 
 struct QuoteView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
         ZStack {
             Color("redish").ignoresSafeArea()
             VStack {
-                HStack {
-                    Image(systemName: "chevron.backward")
-                        .resizable(resizingMode: .stretch)
-                        .frame(width: 11.0, height: 18.0)
-                        .foregroundColor(Color.white)
-                        .padding()
-                    Spacer()
-                    Text("Misconception title")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.trailing)
-                        .padding()
-                }
                 Spacer()
                 HStack {
                     Spacer()
@@ -46,11 +33,41 @@ struct QuoteView: View {
                 .padding([.bottom, .trailing])
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+                            leading: backButton,
+                            trailing: HStack {
+                                Text("Misconception Title").font(.title2)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.white)
+                                    .multilineTextAlignment(.trailing)
+                            }
+                        )
         .accentColor(Color.black)
     }
+    
+    // Custom back button
+       private var backButton: some View {
+           Button(action: {
+               // Handle custom back button action
+               presentationMode.wrappedValue.dismiss()
+           }) {
+               HStack {
+                   Image(systemName: "chevron.backward")
+                       .resizable(resizingMode: .stretch)
+                       .frame(width: 11.0, height: 18.0)
+                       .foregroundColor(Color.white)
+               }
+               .foregroundColor(.white)
+           }
+       }
 }
+
+
 struct QuoteView_Previews: PreviewProvider {
     static var previews: some View {
         QuoteView()
     }
 }
+
+
