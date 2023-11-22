@@ -34,12 +34,12 @@ struct ContentView: View {
                 }
             
             // Pass the data to QuoteView
-            if let quoteData = viewModel.quoteData {
-                QuoteView(quoteData: quoteData)
-                    .tabItem {
-                        Label("Profile", systemImage: "person")
-                    }
-            }
+            
+            VideoView()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
+        
         }
     }
 }

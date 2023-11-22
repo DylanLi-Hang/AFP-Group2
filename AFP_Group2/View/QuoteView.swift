@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct QuoteView: View {
-    var quoteData: QuoteData
 
     var body: some View {
         ZStack {
@@ -29,8 +28,7 @@ struct QuoteView: View {
                         .padding()
                 }
                 Spacer()
-                    Text(quoteData.message)
-                        .foregroundColor(Color("blackish"))
+                Text(attributedString(text: "text", highlighted: "tex", backgroundColor: .yellow, foregroundColor: .red))
                         .font(.title)
                 HStack {
                     Spacer()
@@ -54,11 +52,20 @@ struct QuoteView: View {
         }
         .accentColor(Color.black)
     }
+    private func attributedString(text: String, highlighted: String, backgroundColor: UIColor, foregroundColor: UIColor) -> AttributedString {
+        var attributedString = AttributedString(text)
+
+        if let range = attributedString.range(of: highlighted) {
+            attributedString[range].backgroundColor = backgroundColor
+            attributedString[range].foregroundColor = foregroundColor
+        }
+        return attributedString
+    }
 }
 struct QuoteView_Previews: PreviewProvider {
     static var previews: some View {
         // Provide sample data for previews
-        QuoteView(quoteData: QuoteData(message: "Sample Quote", messageColor: "blue"))
+        QuoteView()
     }
 }
 
