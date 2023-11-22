@@ -10,10 +10,15 @@
 		05CD9C122B0B0202007C0BF7 /* BubbleMisconceptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */; };
 		05CD9C162B0C1E12007C0BF7 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD9C152B0C1E12007C0BF7 /* TestView.swift */; };
 		5B0A1ACB2B0705FD00D94D49 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5B0A1ADD2B0C2F4300D94D49 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A1ADC2B0C2F4300D94D49 /* ViewModel.swift */; };
+		5B0A1ADF2B0C365000D94D49 /* HighlightedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A1ADE2B0C365000D94D49 /* HighlightedTextView.swift */; };
+		5B0A1AE12B0C41D400D94D49 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A1AE02B0C41D400D94D49 /* VideoView.swift */; };
+		5B0A1B072B0DB3D900D94D49 /* JarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A1B062B0DB3D900D94D49 /* JarView.swift */; };
 		B62A45782B0C282100AD482A /* GuidanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62A45772B0C282100AD482A /* GuidanceView.swift */; };
 		B62A457A2B0C2AC100AD482A /* GuidanceView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62A45792B0C2AC100AD482A /* GuidanceView2.swift */; };
 		B63B82532B0C61E000F3F37B /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B82522B0C61E000F3F37B /* ShakeView.swift */; };
 		B63B82552B0C61F000F3F37B /* SliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B82542B0C61F000F3F37B /* SliceView.swift */; };
+		B63B825B2B0D6E0E00F3F37B /* OverlayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B825A2B0D6E0E00F3F37B /* OverlayTest.swift */; };
 		FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */; };
 		FC0228E42B06F99200BCC14C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		FC0228E62B06F99400BCC14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0228E52B06F99400BCC14C /* Assets.xcassets */; };
@@ -41,10 +46,15 @@
 /* Begin PBXFileReference section */
 		05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BubbleMisconceptionView.swift; path = AFP_Group2/BubbleMisconceptionView.swift; sourceTree = SOURCE_ROOT; };
 		05CD9C152B0C1E12007C0BF7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		5B0A1ADC2B0C2F4300D94D49 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5B0A1ADE2B0C365000D94D49 /* HighlightedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightedTextView.swift; sourceTree = "<group>"; };
+		5B0A1AE02B0C41D400D94D49 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		5B0A1B062B0DB3D900D94D49 /* JarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarView.swift; sourceTree = "<group>"; };
 		B62A45772B0C282100AD482A /* GuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceView.swift; sourceTree = "<group>"; };
 		B62A45792B0C2AC100AD482A /* GuidanceView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceView2.swift; sourceTree = "<group>"; };
 		B63B82522B0C61E000F3F37B /* ShakeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
 		B63B82542B0C61F000F3F37B /* SliceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceView.swift; sourceTree = "<group>"; };
+		B63B825A2B0D6E0E00F3F37B /* OverlayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayTest.swift; sourceTree = "<group>"; };
 		FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFP_Group2App.swift; sourceTree = "<group>"; };
 		FC0228E52B06F99400BCC14C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0228E82B06F99400BCC14C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -129,21 +139,26 @@
 		FC0228F02B06FF6800BCC14C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B0A1ADE2B0C365000D94D49 /* HighlightedTextView.swift */,
 				FC0B388B2B0C1DC2005ECC61 /* Icons.swift */,
+				B63B825A2B0D6E0E00F3F37B /* OverlayTest.swift */,
 				B62A45772B0C282100AD482A /* GuidanceView.swift */,
 				B62A45792B0C2AC100AD482A /* GuidanceView2.swift */,
 				FC2A24BF2B0B2156006F81FF /* QuoteView.swift */,
 				B63B82522B0C61E000F3F37B /* ShakeView.swift */,
 				B63B82542B0C61F000F3F37B /* SliceView.swift */,
+				5B0A1AE02B0C41D400D94D49 /* VideoView.swift */,
 				FC2A24BB2B0B1CE5006F81FF /* TapView.swift */,
 				FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */,
 				FC2A24B92B0B1CCF006F81FF /* VideoSwipingView.swift */,
 				FC0A27032B0A37180082F899 /* BottleView.swift */,
+				5B0A1B062B0DB3D900D94D49 /* JarView.swift */,
 				FC0A27072B0ACDB80082F899 /* CollectStarView.swift */,
 				FC0B388D2B0C2D95005ECC61 /* HighlightedTextView.swift */,
 				05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */,
 				FC646FF02B0CE1A5004807D0 /* TestJsonView.swift */,
 				05CD9C152B0C1E12007C0BF7 /* TestView.swift */,
+				5B0A1ADC2B0C2F4300D94D49 /* ViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,17 +263,23 @@
 				05CD9C162B0C1E12007C0BF7 /* TestView.swift in Sources */,
 				05CD9C122B0B0202007C0BF7 /* BubbleMisconceptionView.swift in Sources */,
 				FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */,
+				5B0A1B072B0DB3D900D94D49 /* JarView.swift in Sources */,
 				FCE289522B0729500073CAF1 /* ContentView.swift in Sources */,
 				FC0B388E2B0C2D95005ECC61 /* HighlightedTextView.swift in Sources */,
 				FC2A24BA2B0B1CCF006F81FF /* VideoSwipingView.swift in Sources */,
 				B63B82552B0C61F000F3F37B /* SliceView.swift in Sources */,
 				FC0A27082B0ACDB80082F899 /* CollectStarView.swift in Sources */,
 				FC646FF12B0CE1A5004807D0 /* TestJsonView.swift in Sources */,
+				5B0A1AE12B0C41D400D94D49 /* VideoView.swift in Sources */,
+				5B0A1ADD2B0C2F4300D94D49 /* ViewModel.swift in Sources */,
+				FC0A27082B0ACDB80082F899 /* CollectStarView.swift in Sources */,
+				5B0A1ADF2B0C365000D94D49 /* HighlightedTextView.swift in Sources */,
 				FC0B38482B0B94A2005ECC61 /* DataModel.swift in Sources */,
 				B62A457A2B0C2AC100AD482A /* GuidanceView2.swift in Sources */,
 				B63B82532B0C61E000F3F37B /* ShakeView.swift in Sources */,
 				B62A45782B0C282100AD482A /* GuidanceView.swift in Sources */,
 				FC0B388C2B0C1DC2005ECC61 /* Icons.swift in Sources */,
+				B63B825B2B0D6E0E00F3F37B /* OverlayTest.swift in Sources */,
 				FC2A24C02B0B2156006F81FF /* QuoteView.swift in Sources */,
 				FC0A27042B0A37180082F899 /* BottleView.swift in Sources */,
 				FC0228F92B07135500BCC14C /* MisconceptionModel.swift in Sources */,
@@ -396,7 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AFP_Group2/Preview Content\"";
-				DEVELOPMENT_TEAM = 3ZN3YHAN32;
+				DEVELOPMENT_TEAM = DG38X7YP5S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -409,7 +430,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uts.AFP-Group2-Fabi";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uts.AFP-Group2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -425,7 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AFP_Group2/Preview Content\"";
-				DEVELOPMENT_TEAM = 3ZN3YHAN32;
+				DEVELOPMENT_TEAM = DG38X7YP5S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -438,7 +459,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uts.AFP-Group2-Fabi";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uts.AFP-Group2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
