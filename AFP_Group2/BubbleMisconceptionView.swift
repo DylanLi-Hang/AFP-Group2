@@ -97,7 +97,7 @@ struct BubbleMisconceptionView: View {
                 
             }
             .frame(width: renderWidth, height: renderHeight)
-            NavigationLink(destination: QuoteView(), isActive: $activateLink) {
+            NavigationLink(destination: VideoSwipingView(), isActive: $activateLink) {
                 EmptyView()
                             }
                             .hidden()
