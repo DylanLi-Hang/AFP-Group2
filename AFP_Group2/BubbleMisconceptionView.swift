@@ -43,7 +43,7 @@ struct BubbleMisconceptionView: View {
                                     Circle()
                                         .rotation(Angle(degrees: Double.random(in: 0..<360)))
                                         .frame(width: 20, height: 20)
-                                        .foregroundColor(bubble.color)
+                                        .foregroundColor(Color(bubble.color))
                                         .offset(x: isExploded ? (Double.random(in: -1...1) * 500) : 0, y: isExploded ? (Double.random(in: -1...1) * 500) : 0)
                                         .opacity(isExploded ? 0 : 1)
                                         .animation(.easeInOut.speed(0.6), value: isExploded)
@@ -51,7 +51,7 @@ struct BubbleMisconceptionView: View {
                                 }
                             }
                             Circle()
-                                .fill(bubble.color)
+                                .fill(Color(bubble.color))
                                 .frame(width: isExploded ? bubble.radius * 10 : bubble.radius * 2, height: isExploded ? bubble.radius * 10 : bubble.radius * 2)
                                 .opacity(isExploded ? 0 : 1)
                                 .animation(.easeInOut.speed(0.6), value: isExploded)
@@ -105,21 +105,29 @@ struct BubbleMisconceptionView: View {
                             .hidden()
                             .id(activateLink) // Add id for triggering the transition
                             .transition(.opacity) // Apply the opacity transition
+                            
         }
-        .background(.white)
         .navigationBarBackButtonHidden(true)
-
-    
+        .background(.white)    
         .onAppear {
             // Reset smashState to false when navigating back
             smashState = false
             bubbles = []
-            // Include the sissconception array in here
+
             var index = 0
-            for i in 0..<12 {
-                index = (index == 7) ? 0 : index + 1;
-                bubbles.append(Bubble(radius: 120, position: randomPosition(in: CGRect(x: 0, y: 0, width: renderWidth, height: renderHeight)), velocity: randomVelocity(), color: colors[index],text: people[i % 6], visible: true))
+            for index in 0..<misconceptions.count {
+                let item = misconceptions[index]
+                
+                bubbles.append(Bubble(
+                    radius: 120,
+                    position: randomPosition(in: CGRect(x: 0, y: 0, width: renderWidth, height: renderHeight)),
+                    velocity: randomVelocity(),
+                    color: UIColor[item.backgroundColor],
+                    text: item.misconception,
+                    visible: true
+                ))
             }
+            print(bubbles)
             
             let timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { _ in
                 withAnimation {
@@ -259,7 +267,7 @@ struct Bubble: Equatable {
     var radius: CGFloat = 200.0
     var position: CGPoint
     var velocity: CGVector
-    var color: Color
+    var color: UIColor
     var text: String
     var visible: Bool
 }
