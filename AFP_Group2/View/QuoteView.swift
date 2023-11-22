@@ -15,6 +15,8 @@ struct QuoteView: View {
             Color("redish").ignoresSafeArea()
             VStack {
                 Spacer()
+                Text(attributedString(text: "text", highlighted: "tex", backgroundColor: .yellow, foregroundColor: .red))
+                        .font(.title)
                 HStack {
                     Spacer()
                     VStack {
@@ -23,11 +25,13 @@ struct QuoteView: View {
                             .frame(width: 24.0, height: 39.0)
                             .foregroundColor(Color.white)
                         Spacer()
-                            .frame(height: 10)
+                            .frame(height: 15)
                         Image(systemName: "square.and.arrow.up")
                             .resizable(resizingMode: .stretch)
                             .frame(width: 24.0, height: 30.52)
                             .foregroundColor(Color.white)
+                        Spacer()
+                            .frame(height: 15)
                     }
                 }
                 .padding([.bottom, .trailing])
@@ -66,8 +70,7 @@ struct QuoteView: View {
 
 struct QuoteView_Previews: PreviewProvider {
     static var previews: some View {
+        // Provide sample data for previews
         QuoteView()
     }
 }
-
-

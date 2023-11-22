@@ -1,7 +1,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    init() {
+        // Configure the UITabBar appearance
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.white
+
+        // Apply the appearance to all tab bar instances
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+    }
+ 
+    @StateObject var viewModel = QuoteViewModel() // Observe changes in QuoteViewModel
+
     var body: some View {
         TabView() {
             NavigationView {
@@ -16,7 +28,9 @@ struct ContentView: View {
                     Label("Saved", systemImage: "bookmark")
                 }
             
-            QuoteView()
+            // Pass the data to QuoteView
+            
+            VideoView()
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
@@ -25,8 +39,7 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+
+#Preview {
+    ContentView()
 }
