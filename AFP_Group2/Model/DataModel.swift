@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 var misconceptions: [MisconceptionModel] = load("data.json")
 
-func loadJsonDataFromFile() {
+private func loadJsonDataFromFile() {
     guard let fileUrl = Bundle.main.url(forResource: "data", withExtension: "json") else {
         print("JSON file not found")
         return
@@ -25,26 +26,6 @@ func loadJsonDataFromFile() {
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
-    loadJsonDataFromFile()
-    let jsonData = """
-    {
-        "Misconception":"IT Careers are not creative",
-        "Quote / Fact":"When I started working on Computer Science I realized how creative, social and fun it was, how you could build things and create things that people all over the world could use. If you could change technology, you could change the world.",
-        "Highlight":"Computer Science",
-        "Citation":"Susan Wojcicki",
-        "Career":"CEO of YouTube",
-        "Video file name":"video1"
-    }
-    """.data(using: .utf8)!
-    
-    
-    do {
-        let careerInfo = try JSONDecoder().decode(MisconceptionModel.self, from: jsonData)
-//        print(careerInfo)
-    } catch {
-        print("Error decoding JSON: \(error)")
-    }
-    
     
     let data: Data
 
@@ -67,4 +48,15 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
     
+}
+
+func attributedString(text: String, highlighted: String, backgroundColor: UIColor, foregroundColor: UIColor) -> AttributedString {
+    var attributedString = AttributedString(text)
+
+    if let range = attributedString.range(of: highlighted) {
+        attributedString[range].backgroundColor = backgroundColor
+        attributedString[range].foregroundColor = foregroundColor
+        
+    }
+    return attributedString
 }
