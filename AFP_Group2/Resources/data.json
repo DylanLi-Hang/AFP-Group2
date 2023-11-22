@@ -6,8 +6,8 @@
         "Citation":"Susan Wojcicki",
         "Career":"CEO of YouTube",
         "Video file name":"video1",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Men are better than women in sciences",
@@ -16,8 +16,8 @@
         "Citation":"Francoise Barre",
         "Career":"Nobel Prize in Physiology and Medicine",
         "Video file name":"video2",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Women often fail in IT careers",
@@ -26,8 +26,8 @@
         "Citation":"Michelle Obama",
         "Career":null,
         "Video file name":"video3",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Women aren't smart enough for a career in IT",
@@ -36,8 +36,8 @@
         "Citation":"Karen Sparck Jones",
         "Career":"Professor at the Cambridge Computer Laboratory",
         "Video file name":"video4",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Women aren't good at coding",
@@ -46,8 +46,8 @@
         "Citation":"Ada Lovelace",
         "Career":"First computer programmer",
         "Video file name":"video5",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Women aren't likely to get leadership in the IT industry",
@@ -56,8 +56,8 @@
         "Citation":"Shaherose Charania",
         "Career":"Tech entrepreneur",
         "Video file name":"video6",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Most people that work in IT are male",
@@ -66,8 +66,8 @@
         "Citation":"Erin Teague",
         "Career":"Director of Product Management at YouTube",
         "Video file name":"video7",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Women aren't taken seriously in the IT industry",
@@ -76,8 +76,8 @@
         "Citation":"Melinda Gates",
         "Career":"Co-founder of the Bill & Melinda Gates Foundation",
         "Video file name":"video8",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Workplace culture can feel excluding for women",
@@ -86,8 +86,8 @@
         "Citation":"Diversity wins by McKinsey & Company",
         "Career":null,
         "Video file name":"video9",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Women get less opportunities than men",
@@ -96,8 +96,8 @@
         "Citation":"Susan Wojcicki",
         "Career":"CEO of YouTube",
         "Video file name":"video10",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"There aren't many female role models in the IT industry",
@@ -106,8 +106,8 @@
         "Citation":"Sheryl Sandberg",
         "Career":"COO of Facebook and Founder of Leanin.org",
         "Video file name":"video11",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Women are not good at IT",
@@ -116,8 +116,8 @@
         "Citation":"Megan Smith",
         "Career":"Third Chief Technology Officer of the United States",
         "Video file name":"video12",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Women are held up to different standards than men",
@@ -126,8 +126,8 @@
         "Citation":"Rebecca Garcia",
         "Career":"Computer Programmer and 2016 Hispanic STEM Star",
         "Video file name":"video13",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     },
     {
         "Misconception":"Women frequently experience being interrupted or talked over in professional settings",
@@ -136,7 +136,7 @@
         "Citation":"Ursula Burn",
         "Career":"CEO of Xerox",
         "Video file name":"video14",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish"
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish"
     }
 ]

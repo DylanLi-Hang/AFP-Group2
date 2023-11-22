@@ -23,17 +23,6 @@ private struct HighlightedText: View {
 
 }
 
-private func attributedString(text: String, highlighted: String, backgroundColor: UIColor, foregroundColor: UIColor) -> AttributedString {
-    var attributedString = AttributedString(text)
-
-    if let range = attributedString.range(of: highlighted) {
-        attributedString[range].backgroundColor = backgroundColor
-        attributedString[range].foregroundColor = foregroundColor
-        
-    }
-    return attributedString
-}
-
 
 #Preview {
     HighlightedText(text: "Hello", highlighted: "el")
