@@ -50,13 +50,14 @@ func load<T: Decodable>(_ filename: String) -> T {
     
 }
 
-func attributedString(text: String, highlighted: String, backgroundColor: UIColor, foregroundColor: UIColor) -> AttributedString {
+func attributedString(text: String, highlighted: String? = nil, backgroundColor: UIColor, foregroundColor: UIColor) -> AttributedString {
     var attributedString = AttributedString(text)
 
-    if let range = attributedString.range(of: highlighted) {
+    if let highlighted = highlighted, !highlighted.isEmpty,
+       let range = attributedString.range(of: highlighted) {
         attributedString[range].backgroundColor = backgroundColor
         attributedString[range].foregroundColor = foregroundColor
-        
     }
+
     return attributedString
 }
