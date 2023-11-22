@@ -85,6 +85,12 @@ struct BubbleMisconceptionView: View {
                                     // Change Size
                                     let centerY = geometry.frame(in: .global).midY
                                     handleClick(for: index, with: centerY)
+                                    
+                                    print("SMAAAAASH IT")
+                                    print("Activate Link >>: \(activateLink)")
+                                    print("Smash State >>: \(smashState)")
+                                    print("Is Exploded >>:\(isExploded)")
+                                    print("Bubble Count : >> \(bubbles.count)")
                                 }
                             VStack {
                                 Text(bubble.text).font(.title2)
@@ -109,6 +115,7 @@ struct BubbleMisconceptionView: View {
         .background(.white)    
         .onAppear {
             // (Re)create Bubble Array
+            startMotionManager()
             timer?.invalidate()
             recreateBubblesArray();
             speed = CGFloat(1)
@@ -122,9 +129,7 @@ struct BubbleMisconceptionView: View {
             }
             if let timer = timer {
                 RunLoop.main.add(timer, forMode: .common)
-            }            
-            
-            startMotionManager()
+            }
         }
         .onDisappear {
                     timer?.invalidate()
@@ -263,15 +268,16 @@ struct BubbleMisconceptionView: View {
                     }
                 }
             }
-        }
-        if smashState{
-            withAnimation {
-                isExploded.toggle()
+            if smashState{
+                withAnimation {
+                    isExploded.toggle()
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                   activateLink = true
+                               }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                               activateLink = true
-                           }
         }
+       
     }
     
     private func stopMotionManager() {
