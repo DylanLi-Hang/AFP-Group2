@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  AFP_Group2
-//
-//  Created by Dylan on 17/11/2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -22,11 +15,13 @@ struct ContentView: View {
     @StateObject var viewModel = QuoteViewModel() // Observe changes in QuoteViewModel
 
     var body: some View {
-        TabView {
-            TapView()
-                .tabItem {
-                    Label("Home", systemImage: "circle.hexagongrid.fill")
-                }
+        TabView() {
+            NavigationView {
+                BubbleMisconceptionView(stateManager: StateManager())
+            }
+            .tabItem {
+                Label("Home", systemImage: "circle.hexagongrid.fill")
+            }
             
             CollectStarView()
                 .tabItem {
@@ -39,7 +34,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
-        
+                .tag(".profile")
         }
     }
 }

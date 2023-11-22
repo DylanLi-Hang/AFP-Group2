@@ -8,25 +8,12 @@
 import SwiftUI
 
 struct QuoteView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
         ZStack {
             Color("redish").ignoresSafeArea()
             VStack {
-                HStack {
-                    Image(systemName: "chevron.backward")
-                        .resizable(resizingMode: .stretch)
-                        .frame(width: 11.0, height: 18.0)
-                        .foregroundColor(Color.white)
-                        .padding()
-                    Spacer()
-                    Text("Misconception title")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.trailing)
-                        .padding()
-                }
                 Spacer()
                 Text(attributedString(text: "text", highlighted: "tex", backgroundColor: .yellow, foregroundColor: .red))
                         .font(.title)
@@ -50,22 +37,40 @@ struct QuoteView: View {
                 .padding([.bottom, .trailing])
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+                            leading: backButton,
+                            trailing: HStack {
+                                Text("Misconception Title").font(.title2)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.white)
+                                    .multilineTextAlignment(.trailing)
+                            }
+                        )
         .accentColor(Color.black)
     }
-    private func attributedString(text: String, highlighted: String, backgroundColor: UIColor, foregroundColor: UIColor) -> AttributedString {
-        var attributedString = AttributedString(text)
-
-        if let range = attributedString.range(of: highlighted) {
-            attributedString[range].backgroundColor = backgroundColor
-            attributedString[range].foregroundColor = foregroundColor
-        }
-        return attributedString
-    }
+    
+    // Custom back button
+       private var backButton: some View {
+           Button(action: {
+               // Handle custom back button action
+               presentationMode.wrappedValue.dismiss()
+           }) {
+               HStack {
+                   Image(systemName: "chevron.backward")
+                       .resizable(resizingMode: .stretch)
+                       .frame(width: 11.0, height: 18.0)
+                       .foregroundColor(Color.white)
+               }
+               .foregroundColor(.white)
+           }
+       }
 }
+
+
 struct QuoteView_Previews: PreviewProvider {
     static var previews: some View {
         // Provide sample data for previews
         QuoteView()
     }
 }
-

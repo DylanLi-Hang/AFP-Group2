@@ -15,9 +15,9 @@ struct BottleView: View {
     
     var body: some View {
         ZStack {
-            Image("Jar")
+            Image("JarGlass")
                 .resizable()
-                .frame(minWidth: 50, maxWidth: 120, minHeight: 50, maxHeight: 200)
+                .frame(minWidth: 50, maxWidth: 200, minHeight: 50, maxHeight: 240)
                 .scaledToFit()
                 .fixedSize()
                 .border(isHighlighted ? Color.green : Color.clear, width: 5)
