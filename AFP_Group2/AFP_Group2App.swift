@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct AFP_Group2App: App {
+    init() {
+//        let misconceptionModel:MisconceptionModel = DataStore.shared.data?.index(1)
+        
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
