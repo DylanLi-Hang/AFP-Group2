@@ -81,11 +81,13 @@ struct BubbleMisconceptionView: View {
                                 if isExploded {
                                     // The view is disappearing after the explosion animation
                                     stateManager.current = .profile
+                                    misconceptions[index].state = true
                                 }
                             }
                         )
                         .onTapGesture {
                             print("Button Pressed")
+                            misconceptionSelected = misconceptions[index]
                             // Set visibility to false for all bubbles except the tapped one
                             for i in bubbles.indices {
                                 bubbles[i].visible = (bubbles[i] == bubble)
@@ -137,7 +139,7 @@ struct BubbleMisconceptionView: View {
                         
                 }
                 
-                misconceptions[1].state = true
+                
             }
             if let timer = timer {
                 RunLoop.main.add(timer, forMode: .common)
@@ -283,6 +285,8 @@ struct BubbleMisconceptionView: View {
                 let accelerationThreshold: Double = 2.0
                 if acceleration.x > accelerationThreshold || acceleration.y > accelerationThreshold || acceleration.z > accelerationThreshold {
                     withAnimation {
+                        //------------------------
+                        misconceptionSelected.state = true
                         isExploded.toggle()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                                 activateLink.toggle()
