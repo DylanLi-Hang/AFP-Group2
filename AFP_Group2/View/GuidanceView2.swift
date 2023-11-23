@@ -62,7 +62,7 @@ struct GuidanceView2: View {
                 }
                 NavigationLink("", destination: ContentView(), isActive: $isActive)
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                             isActive = true
                         }
                     }
