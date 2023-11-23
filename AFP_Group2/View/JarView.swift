@@ -9,12 +9,12 @@ import SwiftUI
 import SpriteKit
 
 struct JarView: View {
-    var background: Color = .sparkBackground
+    var background: Color = .darkPurpleish
     @State private var isStarVisible = false
     private var starScene: StarScene
 
     init() {
-        starScene = StarScene(size: CGSize(width: 100, height: 400), backgroundColor: UIColor(background))
+        starScene = StarScene(size: CGSize(width: 100, height: 400), backgroundColor: UIColor(background), star_color: "SparkLatest")
     }
 
     
@@ -27,7 +27,7 @@ struct JarView: View {
                     ZStack{
                         ZStack {
                             SpriteView(scene: starScene)
-                                .frame(width: 100, height: 380)
+                                .frame(width: 100, height: 400)
                                 .offset(y:-120)
                             Image("Jar1")
                                 .resizable()
@@ -53,7 +53,7 @@ struct JarView: View {
                                 .foregroundColor(Color("SparkText"))
                                 .multilineTextAlignment(.center)
                                 .offset(y: -100)
-                            Text("Click\nto add it")
+                            Text("Tap to\n add it")
                                 .font(.subheadline)
                                 .fontWeight(.regular)
                                 .foregroundColor(Color("SparkText"))
