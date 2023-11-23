@@ -19,30 +19,7 @@ struct MisconceptionModel: Codable {
     let backgroundColor: String
     let highlightColor: String
     
-
-    enum CodingKeys: String, CodingKey {
-        case misconception = "Misconception"
-        case quoteOrFact = "Quote / Fact"
-        case highlight = "Highlight"
-        case citation = "Citation"
-        case career = "Career"
-        case videoFileName = "Video file name"
-        case backgroundColor = "BackgroundColor"
-        case highlightColor = "HighlightColor"
-    }
-}
-
-struct MisconceptionModel1 {
-    let misconception: String
-    let quoteOrFact: String
-    let highlight: String?
-    let citation: String
-    let career: String?
-    let videoFileName: String
-    
-    let backgroundColor: String
-    let highlightColor: String
-    
+    var state: Bool = true
 
     enum CodingKeys: String, CodingKey {
         case misconception = "Misconception"

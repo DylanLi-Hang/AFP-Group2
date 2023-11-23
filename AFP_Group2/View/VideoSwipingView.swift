@@ -13,20 +13,22 @@ struct VideoSwipingView: View {
     
     let url = URL(string: "https://devstreaming-cdn.apple.com/videos/wwdc/2023/10118/4/A2DA3123-3E74-4ECF-9961-EA390BE9B502/cmaf.m3u8")
     
+    init() {
+        UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().isHidden = false
+    }
+    
     var body: some View {
         let y = print("Update body")
-        ScrollView(.vertical) {
+        ScrollView(.vertical, showsIndicators: false) {
             LazyVStack(spacing: 0) {
                 
                 ZStack {
                     Rectangle()
                         .fill(Color.clear.opacity(0.6))
                         .containerRelativeFrame([.horizontal, .vertical])
-                    Text("Video \(1+1)")
-                        .font(.title)
-                        .bold()
-                    VideoPlayer(player: AVPlayer(url: url!))
-                        .cornerRadius(0)
+                    VideoView()
+                    
                 }
                 
                 ZStack {
@@ -64,7 +66,6 @@ struct VideoSwipingView: View {
     
     private var backButton: some View {
        Button(action: {
-           // Handle custom back button action
            presentationMode.wrappedValue.dismiss()
        }) {
            HStack {
@@ -76,9 +77,6 @@ struct VideoSwipingView: View {
            .foregroundColor(.white)
        }
    }
-    func Debug() {
-        print("entered videoswiping view")
-    }
 }
 
 #Preview {

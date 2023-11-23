@@ -95,11 +95,10 @@ class StarScene: SKScene {
     }
     
     func createStar(at position: CGPoint) -> SKSpriteNode {
-        let starTexture = SKTexture(imageNamed: "SparkTransparent") // Replace "starImage" with your image asset name
+        let starTexture = SKTexture(imageNamed: "SparkPlus")
         let star = SKSpriteNode(texture: starTexture)
         star.position = position
-        star.size = CGSize(width: 30, height: 30) // Adjust size as needed
-//        star.physicsBody = SKPhysicsBody(texture: starTexture, size: star.size)
+        star.size = CGSize(width: 30, height: 30)
         
         let starPath = createStarPath()
         star.physicsBody = SKPhysicsBody(polygonFrom: starPath)
