@@ -32,16 +32,16 @@ struct VideoSwipingView: View {
                     Rectangle()
                         .fill(Color.clear.opacity(0.6))
                         .containerRelativeFrame([.horizontal, .vertical])
-                    VideoView(url_link:misconception.videoURL)
-                    
+                        .background(.yellowish)
+                    QuoteViewScroll(misconception: misconception)
                 }
                 
                 ZStack {
                     Rectangle()
                         .fill(Color.clear.opacity(0.6))
                         .containerRelativeFrame([.horizontal, .vertical])
-                        .background(.yellowish)
-                    QuoteViewScroll(misconception: misconception)
+                    VideoView(url_link:misconception.videoURL)
+                    
                 }
                 
                 ZStack {
@@ -57,6 +57,9 @@ struct VideoSwipingView: View {
         .scrollTargetBehavior(.paging)
         .toolbarBackground(.hidden, for: .navigationBar)
         .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+                    leading: EmptyView(),
+                    trailing: EmptyView())
         .navigationBarItems(
             leading: backButton,
             trailing: HStack {

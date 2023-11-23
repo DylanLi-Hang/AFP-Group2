@@ -68,21 +68,21 @@ struct BubbleMisconceptionView: View {
                         }
                         .opacity(bubble.visible ? 1 : 0)
                         .gesture(
-                                DragGesture()
-                                    .onChanged { _ in
-                                        if smashState{
-                                            withAnimation {
-                                                isExploded.toggle()
-                                            }
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                               activateLink = true
-                                                           }
-                                        }
-                                        if isExploded {
-                                            // The view is disappearing after the explosion animation
-                                            stateManager.current = .profile
-                                        }
+                            DragGesture(minimumDistance: 1)
+                            .onChanged { _ in
+                                if smashState{
+                                    withAnimation {
+                                        isExploded.toggle()
                                     }
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        activateLink = true
+                                    }
+                                }
+                                if isExploded {
+                                    // The view is disappearing after the explosion animation
+                                    stateManager.current = .profile
+                                }
+                            }
                         )
                         .onTapGesture {
                             print("Button Pressed")

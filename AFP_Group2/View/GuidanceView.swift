@@ -10,11 +10,10 @@ import SwiftUI
 struct GuidanceView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var isActive: Bool = false
+
     var body: some View {
         NavigationView {
-            
             ZStack {
-                
                 // Background color
                 Color(.systemBackground).edgesIgnoringSafeArea(.all)
                 
@@ -45,8 +44,17 @@ struct GuidanceView: View {
                         .offset(y: -100)
                     
                     Spacer()
-                    
                 }
+                
+                VStack {
+                    Spacer()
+                    Button("Skip") {
+                        isActive.toggle()
+                    }
+                    .padding()
+                    .foregroundColor(Color.blue)
+                }
+                
                 NavigationLink("", destination: GuidanceView2(), isActive: $isActive)
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -57,36 +65,8 @@ struct GuidanceView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(
-                            leading: backButton,
-                            trailing: HStack {
-                                Text("Guidance").font(.title2)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color.blue)
-                                    .multilineTextAlignment(.trailing)
-                            }
-                        )
     }
-    
-    // Custom back button
-       private var backButton: some View {
-           Button(action: {
-               // Handle custom back button action
-               presentationMode.wrappedValue.dismiss()
-           }) {
-               HStack {
-                   Image(systemName: "chevron.backward")
-                       .resizable(resizingMode: .stretch)
-                       .frame(width: 11.0, height: 18.0)
-                       .foregroundColor(Color.blue)
-               }
-               .foregroundColor(.white)
-           }
-       }
 }
-
-
-
 
 struct GuidanceView_Previews: PreviewProvider {
     static var previews: some View {
