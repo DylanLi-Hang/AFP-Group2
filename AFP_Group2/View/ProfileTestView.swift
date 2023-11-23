@@ -1,13 +1,13 @@
 //
-//  ProfileView.swift
+//  ProfileTestView.swift
 //  AFP_Group2
 //
-//  Created by Manuela Penuela on 23/11/2023.
+//  Created by Dylan on 23/11/2023.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
+struct ProfileTestView: View {
     var body: some View {
         VStack {
             Spacer()
@@ -64,12 +64,9 @@ struct ProfileView: View {
             Spacer()
         }
         .padding()
-
-        
-
     }
 }
 
 #Preview {
-    ProfileView()
+    ProfileTestView()
 }
