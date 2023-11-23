@@ -95,7 +95,7 @@ class StarScene: SKScene {
     }
     
     func createStar(at position: CGPoint) -> SKSpriteNode {
-        let starTexture = SKTexture(imageNamed: "SparkPlus")
+        let starTexture = SKTexture(imageNamed: "SparkLatest")
         let star = SKSpriteNode(texture: starTexture)
         star.position = position
         star.size = CGSize(width: 30, height: 30)

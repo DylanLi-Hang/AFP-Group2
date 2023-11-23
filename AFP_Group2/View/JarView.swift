@@ -9,7 +9,7 @@ import SwiftUI
 import SpriteKit
 
 struct JarView: View {
-    var background: Color = .darkPurpleish
+    var background: Color = .sparkBackground
     @State private var isStarVisible = false
     private var starScene: StarScene
 
@@ -56,7 +56,7 @@ struct JarView: View {
                             Button(action: {
                                 starScene.addStar()
                             }) {
-                                Image("SparkPlus")
+                                Image("SparkLatest")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 100, height: 100) // Set your desired width and height
