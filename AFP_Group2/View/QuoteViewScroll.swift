@@ -18,6 +18,7 @@ struct QuoteViewScroll: View {
                 Color("yellowish").ignoresSafeArea()
                 VStack {
                     let misconception = misconceptions[1]
+                    
                     Spacer()
                     Text(misconception.misconception).font(.title)
                         .multilineTextAlignment(.center)
@@ -60,6 +61,8 @@ struct QuoteViewScroll: View {
                                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                     .frame(width: 25, height: 25)
                                     .foregroundColor(.white)
+                                
+                                // NavigationLink to ContentView
                             }
                             Spacer()
                                 .frame(height: 100)
@@ -67,7 +70,10 @@ struct QuoteViewScroll: View {
                     }
                     .padding([.bottom, .trailing])
                 }
-            }                       
+            }       
+            .onAppear {
+                            print("State : >> \(misconceptions[1].state)")
+                        }
         }
     }
 }

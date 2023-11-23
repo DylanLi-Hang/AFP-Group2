@@ -10,6 +10,7 @@ import AVKit
 
 struct VideoSwipingView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var isLinkActive = false
     
     let url = URL(string: "https://a.uguu.se/ybkMYwxA.mov")
     
@@ -55,11 +56,16 @@ struct VideoSwipingView: View {
         .navigationBarItems(
             leading: backButton,
             trailing: HStack {
-                Text("Men are better than women in sciences").font(.title2)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color.white)
-                    .multilineTextAlignment(.trailing)
+                NavigationLink(destination: ContentView(), isActive: $isLinkActive) {
+                                    Text("Misconceptions")
+                                        .font(.title2)
+                                        .foregroundColor(Color.white)
+                                        .onTapGesture {
+                                            isLinkActive = true
+                                        }
+                                }
             }
+            
         )
         .ignoresSafeArea()
     }
