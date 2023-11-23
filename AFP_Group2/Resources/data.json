@@ -9,7 +9,7 @@
         "BubbleColor":"blueishdark",
         "BackgroundColor":"blueish",
         "HighlightColor":"greenish",
-        "BackgroundTextColor":"white",
+        "BackgroundTextColor":"blackish",
         "HighlightTextColor":"blackish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/r1rcb2fh.mov"
     },
@@ -37,7 +37,7 @@
         "BubbleColor":"pinkishDark",
         "BackgroundColor":"pinkish",
         "HighlightColor":"yellowish",
-        "BackgroundTextColor":"white",
+        "BackgroundTextColor":"blackish",
         "HighlightTextColor":"blackish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/jfb31hc4.mov"
     },
@@ -51,7 +51,7 @@
         "BubbleColor":"redishDark",
         "BackgroundColor":"redish",
         "HighlightColor":"pinkish",
-        "BackgroundTextColor":"white",
+        "BackgroundTextColor":"blackish",
         "HighlightTextColor":"blackish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/t56jw9v.mov"
     },
@@ -79,7 +79,7 @@
         "BubbleColor":"blueishdark",
         "BackgroundColor":"blueish",
         "HighlightColor":"greenish",
-        "BackgroundTextColor":"white",
+        "BackgroundTextColor":"blackish",
         "HighlightTextColor":"blackish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/ypyvkg83.mov"
     },
@@ -107,7 +107,7 @@
         "BubbleColor":"pinkishDark",
         "BackgroundColor":"pinkish",
         "HighlightColor":"yellowish",
-        "BackgroundTextColor":"white",
+        "BackgroundTextColor":"blackish",
         "HighlightTextColor":"blackish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/3aet286y.mov"
     },
@@ -121,13 +121,13 @@
         "BubbleColor":"redishDark",
         "BackgroundColor":"redish",
         "HighlightColor":"pinkish",
-        "BackgroundTextColor":"white",
+        "BackgroundTextColor":"blackish",
         "HighlightTextColor":"blackish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/p37bwlb6.mov"
     },
     {
         "Misconception":"Women get less opportunities than men",
-        "Quote \/ Fact":"\u201cLife doesn\u2019t always present you with the perfect opportunity at the perfect time. Opportunities come when you least expect them, or when you\u2019re not ready for them. Rarely are opportunities presented to you in the perfect way, in a nice little box with a yellow bow on top. Opportunities, the good ones, they\u2019re messy and confusing and hard to recognize. They\u2019re risky. They challenge you.\u201d",
+        "Quote \/ Fact":"\u201cLife doesn\u2019t always present you with the perfect opportunity at the perfect time. Opportunities come when you least expect them, or when you\u2019re not ready for them. Rarely are opportunities presented to you in the perfect way, in a nice little box with a yellow bow on top. \u201d",
         "Highlight":"Opportunities come when you least expect them,",
         "Citation":"Susan Wojcicki",
         "Career":"CEO of YouTube",
@@ -149,7 +149,7 @@
         "BubbleColor":"blueishdark",
         "BackgroundColor":"blueish",
         "HighlightColor":"greenish",
-        "BackgroundTextColor":"white",
+        "BackgroundTextColor":"blackish",
         "HighlightTextColor":"blackish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/jsbxi9h.mov"
     },
@@ -177,22 +177,8 @@
         "BubbleColor":"pinkishDark",
         "BackgroundColor":"pinkish",
         "HighlightColor":"yellowish",
-        "BackgroundTextColor":"white",
+        "BackgroundTextColor":"blackish",
         "HighlightTextColor":"blackish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/j33v6927.mov"
-    },
-    {
-        "Misconception":"Women frequently experience being interrupted or talked over in professional settings",
-        "Quote \/ Fact":"\u201cI didn\u2019t learn to be quiet when I had an opinion. The reason they knew who I was is because I told them.\u201d",
-        "Highlight":"I didn\u2019t learn to be quiet when I had an opinion.",
-        "Citation":"Ursula Burn",
-        "Career":"CEO of Xerox",
-        "Video file name":"video14",
-        "BubbleColor":"redishDark",
-        "BackgroundColor":"redish",
-        "HighlightColor":"pinkish",
-        "BackgroundTextColor":"white",
-        "HighlightTextColor":"blackish",
-        "VideoLink":"https:\/\/pomf2.lain.la\/f\/kjmpcmoy.mov"
     }
 ]

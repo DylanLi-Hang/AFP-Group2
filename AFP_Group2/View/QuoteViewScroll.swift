@@ -36,6 +36,7 @@ struct QuoteViewScroll: View {
                                 
                                 Text(misconception.misconception).font(.title2)
                                     .multilineTextAlignment(.center)
+                                    .frame(width: (UIScreen.main.bounds.width)*0.75)
                                     .foregroundColor(Color[misconception.backgroundTextColor])
                                     .padding(2)
  
@@ -77,11 +78,7 @@ struct QuoteViewScroll: View {
                             }
                             .padding([.bottom, .trailing])
                         }
-                        
-                    
-                    
                 }
-                .padding()
             }
 
             .onAppear {
