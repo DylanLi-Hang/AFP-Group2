@@ -14,7 +14,7 @@ struct JarView: View {
     private var starScene: StarScene
 
     init() {
-        starScene = StarScene(size: CGSize(width: 100, height: 160), backgroundColor: UIColor(background))
+        starScene = StarScene(size: CGSize(width: 100, height: 400), backgroundColor: UIColor(background))
     }
 
     
@@ -24,30 +24,11 @@ struct JarView: View {
             VStack {
                 Spacer()
                 HStack {
-                    VStack {
-                        Text("Do you wanna add this spark to your confidence jar? ")
-                            .font(.title2)
-                            .fontWeight(.medium)
-                            .foregroundColor(Color("blackish"))
-                            .multilineTextAlignment(.center)
-                        Text("Drag down\nto add it")
-                            .font(.subheadline)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color("blackish"))
-                            .multilineTextAlignment(.center)
-                            .rotationEffect(.degrees(10))
-                            .offset(x: 70, y: 30)
-                        Image("arrow1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50)
-                            .rotationEffect(.degrees(-10))
-                            .offset(x: 50, y: -88)
-                            
-                            .frame(height: 270)
+                    ZStack{
                         ZStack {
                             SpriteView(scene: starScene)
-                                .frame(width: 100, height: 160)
+                                .frame(width: 100, height: 380)
+                                .offset(y:-120)
                             Image("Jar1")
                                 .resizable()
                                 .scaledToFit()
@@ -63,8 +44,35 @@ struct JarView: View {
                             }
                             .offset(y: -300)
                         }
+                        .offset(y: 200)
+                        
+                        VStack {
+                            Text("Do you wanna add this spark to your confidence jar? ")
+                                .font(.title2)
+                                .fontWeight(.medium)
+                                .foregroundColor(Color("SparkText"))
+                                .multilineTextAlignment(.center)
+                                .offset(y: -100)
+                            Text("Click\nto add it")
+                                .font(.subheadline)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color("SparkText"))
+                                .multilineTextAlignment(.center)
+                                .rotationEffect(.degrees(10))
+                                .offset(x: 100, y: -60)
+                            Image("arrow1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50)
+                                .rotationEffect(.degrees(-10))
+                                .offset(x: 80, y: -180)
+                                .frame(height: 270)
+                            
+                        }
+                        .frame(width: 200)
+                        
                     }
-                    .frame(width: 200)
+                    
                 }
                 Spacer()
             }

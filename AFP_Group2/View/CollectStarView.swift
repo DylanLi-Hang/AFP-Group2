@@ -10,13 +10,13 @@ import SpriteKit
 
 struct CollectStarView: View {
     @State private var isStarVisible = false
-    let starScene = StarScene(size: CGSize(width: 100, height: 160), backgroundColor: .white)
+    let starScene = StarScene(size: CGSize(width: 100, height: 300), backgroundColor: .white)
     
     var body: some View {
         ZStack {
             SpriteView(scene: starScene)
-                .frame(width: 100, height: 160)
-                .offset(y: 120)
+                .frame(width: 100, height: 300)
+                .offset(y: 50)
             
             BottleView(isHighlighted: false)
                 .offset(y:120)
@@ -51,6 +51,7 @@ class StarScene: SKScene {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         view.allowsTransparency = true
         backgroundColor = sceneBackgroundColor
+        physicsWorld.gravity = CGVector(dx: 0, dy: -1.2)
         
         for i in 0..<10 {
             let delay = SKAction.wait(forDuration: 0.1 * Double(i))
@@ -69,15 +70,13 @@ class StarScene: SKScene {
     }
     
     func addStar() {
-        let xPosition = CGFloat.random(in: 0...size.width)
-        let yPosition = CGFloat.random(in: 0...size.height)
-        let star = createStar(at: CGPoint(x: xPosition, y: yPosition))
+        let star = createStar(at: CGPoint(x: size.width/2, y: size.height-10))
         addChild(star)
     }
     
     func addRandomStar() {
-        let xPosition = CGFloat.random(in: 0...size.width)
-        let yPosition = CGFloat.random(in: 0...size.height)
+        let xPosition = CGFloat.random(in: 40...size.width-40)
+        let yPosition = CGFloat.random(in: 10...size.height-20)
         let star = createStar(at: CGPoint(x: xPosition, y: yPosition))
         addChild(star)
     }
@@ -95,6 +94,7 @@ class StarScene: SKScene {
     }
     
     func createStar(at position: CGPoint) -> SKSpriteNode {
+        
         let starTexture = SKTexture(imageNamed: "SparkLatest")
         let star = SKSpriteNode(texture: starTexture)
         star.position = position
