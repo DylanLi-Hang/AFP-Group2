@@ -38,6 +38,8 @@ struct MisconceptionModel: Codable {
 extension Color {
     static subscript(name: String) -> Color {
         switch name {
+        case ".blueish":
+                return Color.blueish
             case ".yellowish":
                 return Color.yellowish
             case ".redish":
@@ -51,6 +53,9 @@ extension Color {
 extension UIColor {
     static subscript(name: String) -> UIColor {
         switch name {
+            
+            case ".blueish":
+                return UIColor.blueish
             case ".yellowish":
                 return UIColor.yellowish
             case ".redish":
