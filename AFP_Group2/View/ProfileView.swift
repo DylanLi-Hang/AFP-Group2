@@ -40,6 +40,7 @@ struct ProfileView: View {
                 Text("Confidence jar")
                     .foregroundColor(Color("blackish"))
                     .multilineTextAlignment(.leading)
+                    .font(.headline)
                 Spacer()
             }
             Spacer()
@@ -49,6 +50,9 @@ struct ProfileView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 150)
+                    .frame(width: 300, height: 300)
+                    .background(.purpleish)
+                    .cornerRadius(20)
             }
             .frame(width: 355, height:310)
             .background(Color("greyish"))
@@ -64,9 +68,6 @@ struct ProfileView: View {
             Spacer()
         }
         .padding()
-
-        
-
     }
 }
 
