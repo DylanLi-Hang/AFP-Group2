@@ -29,6 +29,8 @@ struct QuoteViewScroll: View {
                                 
                                 
                                 Text(misconception.citation).font(.title2)
+                                    .italic()
+                                    .bold()
                                     .foregroundColor(Color[misconception.highlightTextColor])
                                     .multilineTextAlignment(.center)
                                     .frame(width: (UIScreen.main.bounds.width)/2)

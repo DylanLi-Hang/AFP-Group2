@@ -95,3 +95,16 @@ struct VideoSwipingView: View {
 #Preview {
     VideoSwipingView(misconception: misconceptions[1])
 }
+
+extension View {
+    func onBackSwipe(perform action: @escaping () -> Void) -> some View {
+        gesture(
+            DragGesture()
+                .onEnded({ value in
+                    if value.startLocation.x < 50 && value.translation.width > 80 {
+                        action()
+                    }
+                })
+        )
+    }
+}
