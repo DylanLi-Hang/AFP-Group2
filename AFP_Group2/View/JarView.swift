@@ -6,21 +6,22 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct JarView: View {
+    var background: Color = .yellowish
+    @State private var isStarVisible = false
+    private var starScene: StarScene
 
+    init() {
+        starScene = StarScene(size: CGSize(width: 100, height: 160), backgroundColor: UIColor(background))
+    }
+
+    
     var body: some View {
         ZStack {
-            Color("purpleish").ignoresSafeArea()
+            background.ignoresSafeArea()
             VStack {
-                HStack {
-                    Image(systemName: "chevron.backward")
-                        .resizable(resizingMode: .stretch)
-                        .frame(width: 11.0, height: 18.0)
-                        .foregroundColor(Color("blackish"))
-                        .padding()
-                    Spacer()
-                }
                 Spacer()
                 HStack {
                     VStack {
@@ -43,18 +44,31 @@ struct JarView: View {
                             .rotationEffect(.degrees(-10))
                             .offset(x: 50, y: -88)
                             
-//                        Spacer()
                             .frame(height: 270)
-                        Image("Jar1")
-                            .resizable()
-                            .scaledToFit()
-                            .fixedSize()
+                        ZStack {
+                            SpriteView(scene: starScene)
+                                .frame(width: 100, height: 160)
+                            Image("Jar1")
+                                .resizable()
+                                .scaledToFit()
+                                .fixedSize()
+                            
+                            Button(action: {
+                                starScene.addStar()
+                            }) {
+                                Image("SparkTransparent")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100) // Set your desired width and height
+                            }
+                            .offset(y: -300)
+                        }
                     }
                     .frame(width: 200)
                 }
                 Spacer()
-                    
             }
+            
         }
 
     }
