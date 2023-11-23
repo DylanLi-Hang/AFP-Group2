@@ -8,7 +8,7 @@ struct VideoView: View {
     @State private var player = AVPlayer()
     let videoName: String = "video1"
     let videoType: String = "mov"
-    let url_link:String = "https://devstreaming-cdn.apple.com/videos/wwdc/2023/10118/4/A2DA3123-3E74-4ECF-9961-EA390BE9B502/cmaf.m3u8"
+    let url_link:String = misconceptions[5].videoURL
     
     var body: some View {
         ZStack {
