@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SavedView: View {
     
-    // Assuming you have an array of image names or UIImage objects
     let images: [String] = ["VideoImage1", "VideoImage2", "VideoImage3", "Quote1", "Quote2", "Quote3", "VideoImage4", "VideoImage5", "VideoImage6"]
 
     let columns: [GridItem] = [
@@ -62,7 +61,7 @@ struct NavigationBarModifier: ViewModifier {
         self.titleColor = titleColor 
         // Initialize the stored property
         
-        
+
         let coloredAppearance = UINavigationBarAppearance()
         coloredAppearance.configureWithOpaqueBackground()
         coloredAppearance.backgroundColor = backgroundColor
