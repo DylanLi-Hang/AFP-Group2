@@ -74,12 +74,12 @@
 		FC0B38472B0B94A2005ECC61 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		FC0B388B2B0C1DC2005ECC61 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		FC0B388D2B0C2D95005ECC61 /* HighlightedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedTextView.swift; sourceTree = "<group>"; };
-		FC129E452B0F12E500046819 /* Misconceptions.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Misconceptions.xlsx; sourceTree = "<group>"; };
 		FC129E462B0F370B00046819 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		FC129E482B0F374B00046819 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		FC129E4A2B0F385E00046819 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FC18A02F2B0F66550024812D /* ProfileTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTestView.swift; sourceTree = "<group>"; };
 		FC18A0312B0F66F50024812D /* MainStarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStarterView.swift; sourceTree = "<group>"; };
+		FC18A0332B0F6C7B0024812D /* Misconceptions.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Misconceptions.xlsx; sourceTree = "<group>"; };
 		FC2A24B72B0B1CC3006F81FF /* tap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tap.json; sourceTree = "<group>"; };
 		FC2A24B92B0B1CCF006F81FF /* VideoSwipingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSwipingView.swift; sourceTree = "<group>"; };
 		FC2A24BB2B0B1CE5006F81FF /* TapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
@@ -186,11 +186,11 @@
 		FC0228F32B070DB800BCC14C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC18A0332B0F6C7B0024812D /* Misconceptions.xlsx */,
 				FC129E482B0F374B00046819 /* loading.json */,
 				FCC893CB2B0D71CF00912CDA /* shake.json */,
 				FCC893CA2B0D71CF00912CDA /* slice.json */,
 				FC0B38432B0B7F47005ECC61 /* data.json */,
-				FC129E452B0F12E500046819 /* Misconceptions.xlsx */,
 				FC0B38412B0B7EC0005ECC61 /* convert.py */,
 				FC2A24B72B0B1CC3006F81FF /* tap.json */,
 			);

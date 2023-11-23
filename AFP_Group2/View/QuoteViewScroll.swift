@@ -22,20 +22,21 @@ struct QuoteViewScroll: View {
                             VStack{
                                 Spacer()
                                 
-                                Text(attributedString(text: misconception.quoteOrFact, highlighted: misconception.highlight, backgroundColor: UIColor[misconception.highlightColor], foregroundColor: .white))
+                                Text(attributedString(text: misconception.quoteOrFact, highlighted: misconception.highlight, backgroundColor: UIColor[misconception.bubbleColor], foregroundColor: UIColor[misconception.highlightTextColor]))
                                     .font(.title)
                                     .multilineTextAlignment(.center)
                                     .frame(width: (UIScreen.main.bounds.width)*0.9)
                                 
                                 
                                 Text(misconception.citation).font(.title2)
+                                    .foregroundColor(Color[misconception.highlightTextColor])
                                     .multilineTextAlignment(.center)
                                     .frame(width: (UIScreen.main.bounds.width)/2)
                                     .padding(20)
                                 
                                 Text(misconception.misconception).font(.title2)
                                     .multilineTextAlignment(.center)
-                                    .foregroundColor(Color.white)
+                                    .foregroundColor(Color[misconception.backgroundTextColor])
                                     .padding(2)
  
                                  

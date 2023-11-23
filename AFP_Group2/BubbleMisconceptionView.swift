@@ -261,7 +261,7 @@ struct BubbleMisconceptionView: View {
                     radius: 120,
                     position: randomPosition(in: CGRect(x: 0, y: 0, width: renderWidth, height: renderHeight)),
                     velocity: randomVelocity(),
-                    color: UIColor[item.backgroundColor],
+                    color: UIColor[item.bubbleColor],
                     text: item.misconception,
                     visible: true,
                     isPopped: item.state
