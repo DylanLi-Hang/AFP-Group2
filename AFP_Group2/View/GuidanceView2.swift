@@ -36,7 +36,7 @@ struct GuidanceView2: View {
                         )
                         .padding(.bottom, 50)
                     
-                    Spacer()
+
                     
                     HStack {
                         

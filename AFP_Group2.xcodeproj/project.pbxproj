@@ -19,6 +19,7 @@
 		B63B82532B0C61E000F3F37B /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B82522B0C61E000F3F37B /* ShakeView.swift */; };
 		B63B82552B0C61F000F3F37B /* SliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B82542B0C61F000F3F37B /* SliceView.swift */; };
 		B63B825B2B0D6E0E00F3F37B /* OverlayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63B825A2B0D6E0E00F3F37B /* OverlayTest.swift */; };
+		B6F157562B0ECBE700C21342 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F157552B0ECBE700C21342 /* SavedView.swift */; };
 		FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */; };
 		FC0228E42B06F99200BCC14C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		FC0228E62B06F99400BCC14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0228E52B06F99400BCC14C /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		B63B82522B0C61E000F3F37B /* ShakeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
 		B63B82542B0C61F000F3F37B /* SliceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceView.swift; sourceTree = "<group>"; };
 		B63B825A2B0D6E0E00F3F37B /* OverlayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayTest.swift; sourceTree = "<group>"; };
+		B6F157552B0ECBE700C21342 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		FC0228E12B06F99200BCC14C /* AFP_Group2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFP_Group2App.swift; sourceTree = "<group>"; };
 		FC0228E52B06F99400BCC14C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0228E82B06F99400BCC14C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				B63B82522B0C61E000F3F37B /* ShakeView.swift */,
 				B63B82542B0C61F000F3F37B /* SliceView.swift */,
 				5B0A1AE02B0C41D400D94D49 /* VideoView.swift */,
+				B6F157552B0ECBE700C21342 /* SavedView.swift */,
 				FC2A24BB2B0B1CE5006F81FF /* TapView.swift */,
 				FC2A24BD2B0B1CFF006F81FF /* LottieView.swift */,
 				FC2A24B92B0B1CCF006F81FF /* VideoSwipingView.swift */,
@@ -260,6 +263,7 @@
 				FC2A24BC2B0B1CE5006F81FF /* TapView.swift in Sources */,
 				5B0A1ACB2B0705FD00D94D49 /* (null) in Sources */,
 				FC0228E42B06F99200BCC14C /* (null) in Sources */,
+				B6F157562B0ECBE700C21342 /* SavedView.swift in Sources */,
 				05CD9C162B0C1E12007C0BF7 /* TestView.swift in Sources */,
 				05CD9C122B0B0202007C0BF7 /* BubbleMisconceptionView.swift in Sources */,
 				FC0228E22B06F99200BCC14C /* AFP_Group2App.swift in Sources */,
@@ -414,10 +418,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AFP_Group2/Preview Content\"";
-				DEVELOPMENT_TEAM = 3ZN3YHAN32;
+				DEVELOPMENT_TEAM = 62US777RAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -430,8 +435,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uts.AFP-Group2-Fabi";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.jamie.AFP-Group2-Fabi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -443,10 +449,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AFP_Group2/Preview Content\"";
-				DEVELOPMENT_TEAM = 3ZN3YHAN32;
+				DEVELOPMENT_TEAM = 62US777RAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -459,8 +466,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uts.AFP-Group2-Fabi";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.jamie.AFP-Group2-Fabi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

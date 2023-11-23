@@ -26,6 +26,7 @@ struct GuidanceView: View {
                         .font(.title)
                         .padding(.bottom, 50)
                     
+                    
                     Circle()
                         .fill(Color.yellow.opacity(0.3))
                         .frame(width: 200, height: 200)
