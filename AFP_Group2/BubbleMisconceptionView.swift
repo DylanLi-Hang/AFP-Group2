@@ -21,6 +21,7 @@ struct BubbleMisconceptionView: View {
     @State private var speed = CGFloat(1)
     @State private var timer: Timer?;
     
+    @State private var misconceptionSelected: MisconceptionModel = misconceptions[0]
     
     @State private var bubbles: [Bubble] = []
     //@EnvironmentObject var bubbleData: BubbleData
@@ -55,23 +56,7 @@ struct BubbleMisconceptionView: View {
                                 .frame(width: isExploded ? bubble.radius * 10 : bubble.radius * 2, height: isExploded ? bubble.radius * 10 : bubble.radius * 2)
                                 .opacity(isExploded ? 0 : (bubble.isPopped ? 0.5 : 1))
                                 .animation(.easeInOut.speed(0.6), value: isExploded)
-                                .gesture(
-                                        DragGesture()
-                                            .onChanged { _ in
-                                                if smashState{
-                                                    withAnimation {
-                                                        isExploded.toggle()
-                                                    }
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                                                       activateLink = true
-                                                                   }
-                                                }
-                                                if isExploded {
-                                                    // The view is disappearing after the explosion animation
-                                                    stateManager.current = .profile
-                                                }
-                                            }
-                                )
+                                
                             VStack(alignment: .center, spacing: 0){
                                         Spacer()
                                         Text(bubble.text)
@@ -82,6 +67,23 @@ struct BubbleMisconceptionView: View {
                             .frame(width: bubble.radius * 2 * 0.7, height: bubble.radius * 2 * 0.7)
                         }
                         .opacity(bubble.visible ? 1 : 0)
+                        .gesture(
+                                DragGesture()
+                                    .onChanged { _ in
+                                        if smashState{
+                                            withAnimation {
+                                                isExploded.toggle()
+                                            }
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                               activateLink = true
+                                                           }
+                                        }
+                                        if isExploded {
+                                            // The view is disappearing after the explosion animation
+                                            stateManager.current = .profile
+                                        }
+                                    }
+                        )
                         .onTapGesture {
                             print("Button Pressed")
                             // Set visibility to false for all bubbles except the tapped one
@@ -97,6 +99,8 @@ struct BubbleMisconceptionView: View {
                             let centerY = geometry.frame(in: .global).midY
                             handleClick(for: index, with: centerY)
                             
+                            misconceptionSelected = misconceptions[index]
+                            
                             print("SMAAAAASH IT")
                             print("Activate Link >>: \(activateLink)")
                             print("Smash State >>: \(smashState)")
@@ -109,8 +113,8 @@ struct BubbleMisconceptionView: View {
                 }
                 
             }
-            .frame(width: renderWidth, height: renderHeight)
-            NavigationLink(destination: VideoSwipingView(), isActive: $activateLink) {
+            .frame(width: renderWidth, height: smashState ? renderHeight/2 : renderHeight)
+            NavigationLink(destination: VideoSwipingView(misconception: misconceptionSelected), isActive: $activateLink) {
                 EmptyView()
                             }
                             .hidden()
