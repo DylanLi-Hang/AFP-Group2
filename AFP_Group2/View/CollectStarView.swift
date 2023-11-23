@@ -10,7 +10,7 @@ import SpriteKit
 
 struct CollectStarView: View {
     @State private var isStarVisible = false
-    let starScene = StarScene(size: CGSize(width: 100, height: 300), backgroundColor: .white)
+    let starScene = StarScene(size: CGSize(width: 100, height: 300), backgroundColor: .white, star_color: "SparkLatest")
     
     var body: some View {
         ZStack {
@@ -37,10 +37,12 @@ struct CollectStarView: View {
 
 class StarScene: SKScene {
     var sceneBackgroundColor: UIColor
+    var star_color:String = "SparkColorLatest"
     
-    init(size: CGSize, backgroundColor: UIColor) {
+    init(size: CGSize, backgroundColor: UIColor, star_color: String) {
         self.sceneBackgroundColor = backgroundColor
         super.init(size: size)
+        self.star_color = star_color
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -95,7 +97,7 @@ class StarScene: SKScene {
     
     func createStar(at position: CGPoint) -> SKSpriteNode {
         
-        let starTexture = SKTexture(imageNamed: "SparkLatest")
+        let starTexture = SKTexture(imageNamed: star_color)
         let star = SKSpriteNode(texture: starTexture)
         star.position = position
         star.size = CGSize(width: 30, height: 30)

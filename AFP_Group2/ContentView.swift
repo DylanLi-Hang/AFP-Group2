@@ -23,18 +23,18 @@ struct ContentView: View {
                 Label("Home", systemImage: "circle.hexagongrid.fill")
             }
             
-            CollectStarView()
+            SavedView()
                 .tabItem {
                     Label("Saved", systemImage: "bookmark")
                 }
             
             // Pass the data to QuoteView
             
-            GuidanceView()
+            ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
-                .tag(".profile")
+//                .tag(".profile")
         }
         .navigationBarBackButtonHidden(true)
     }

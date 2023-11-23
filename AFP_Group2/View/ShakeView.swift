@@ -12,7 +12,7 @@ import Lottie
 struct ShakeView: View {
     var body: some View {
         LottieView(name: "shake", loopMode: .loop)
-            .frame(width: 200, height: 200, alignment: .center)
+            .frame(width: 400, height: 400, alignment: .center)
     }
 }
 
