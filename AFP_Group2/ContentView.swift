@@ -30,7 +30,7 @@ struct ContentView: View {
             
             // Pass the data to QuoteView
             
-            VideoView()
+            GuidanceView()
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }

@@ -8,7 +8,7 @@ struct VideoView: View {
     @State private var player = AVPlayer()
     let videoName: String = "video1"
     let videoType: String = "mov"
-    let url_link:String = misconceptions[5].videoURL
+    var url_link:String
     
     var body: some View {
         ZStack {
@@ -76,6 +76,6 @@ struct VideoView: View {
 }
 struct VideoView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoView()
+        VideoView(url_link:misconceptions[0].videoURL)
     }
 }

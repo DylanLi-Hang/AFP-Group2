@@ -12,11 +12,15 @@ struct VideoSwipingView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var isLinkActive = false
     
-    let url = URL(string: "https://a.uguu.se/ybkMYwxA.mov")
     
-    init() {
+    var misconception:MisconceptionModel
+    
+//    let url = URL(string: "https://a.uguu.se/ybkMYwxA.mov")
+    
+    init(misconception:MisconceptionModel) {
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().isHidden = false
+        self.misconception = misconception
     }
     
     var body: some View {
@@ -28,7 +32,7 @@ struct VideoSwipingView: View {
                     Rectangle()
                         .fill(Color.clear.opacity(0.6))
                         .containerRelativeFrame([.horizontal, .vertical])
-                    VideoView()
+                    VideoView(url_link:misconception.videoURL)
                     
                 }
                 
@@ -37,7 +41,7 @@ struct VideoSwipingView: View {
                         .fill(Color.clear.opacity(0.6))
                         .containerRelativeFrame([.horizontal, .vertical])
                         .background(.yellowish)
-                    QuoteViewScroll()
+                    QuoteViewScroll(misconception: misconception)
                 }
                 
                 ZStack {
@@ -86,5 +90,5 @@ struct VideoSwipingView: View {
 }
 
 #Preview {
-    VideoSwipingView()
+    VideoSwipingView(misconception: misconceptions[1])
 }

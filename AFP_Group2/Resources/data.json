@@ -6,8 +6,8 @@
         "Citation":"Susan Wojcicki",
         "Career":"CEO of YouTube",
         "Video file name":"video1",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".blueish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/r1rcb2fh.mov"
     },
     {
@@ -17,8 +17,8 @@
         "Citation":"Francoise Barre",
         "Career":"Nobel Prize in Physiology and Medicine",
         "Video file name":"video2",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/bxs5vxop.mov"
     },
     {
@@ -28,8 +28,8 @@
         "Citation":"Michelle Obama",
         "Career":null,
         "Video file name":"video3",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/jfb31hc4.mov"
     },
     {
@@ -39,8 +39,8 @@
         "Citation":"Karen Sparck Jones",
         "Career":"Professor at the Cambridge Computer Laboratory",
         "Video file name":"video4",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/t56jw9v.mov"
     },
     {
@@ -50,8 +50,8 @@
         "Citation":"Ada Lovelace",
         "Career":"First computer programmer",
         "Video file name":"video5",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/qd09o93s.mov"
     },
     {
@@ -61,8 +61,8 @@
         "Citation":"Shaherose Charania",
         "Career":"Tech entrepreneur",
         "Video file name":"video6",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/ypyvkg83.mov"
     },
     {
@@ -72,8 +72,8 @@
         "Citation":"Erin Teague",
         "Career":"Director of Product Management at YouTube",
         "Video file name":"video7",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/vd1n9b52.mov"
     },
     {
@@ -83,8 +83,8 @@
         "Citation":"Melinda Gates",
         "Career":"Co-founder of the Bill & Melinda Gates Foundation",
         "Video file name":"video8",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/3aet286y.mov"
     },
     {
@@ -94,8 +94,8 @@
         "Citation":"Diversity wins by McKinsey & Company",
         "Career":null,
         "Video file name":"video9",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/p37bwlb6.mov"
     },
     {
@@ -105,8 +105,8 @@
         "Citation":"Susan Wojcicki",
         "Career":"CEO of YouTube",
         "Video file name":"video10",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/hywn16em.mov"
     },
     {
@@ -116,8 +116,8 @@
         "Citation":"Sheryl Sandberg",
         "Career":"COO of Facebook and Founder of Leanin.org",
         "Video file name":"video11",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/jsbxi9h.mov"
     },
     {
@@ -127,8 +127,8 @@
         "Citation":"Megan Smith",
         "Career":"Third Chief Technology Officer of the United States",
         "Video file name":"video12",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/6dzw75oc.mov"
     },
     {
@@ -138,8 +138,8 @@
         "Citation":"Rebecca Garcia",
         "Career":"Computer Programmer and 2016 Hispanic STEM Star",
         "Video file name":"video13",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/j33v6927.mov"
     },
     {
@@ -149,8 +149,8 @@
         "Citation":"Ursula Burn",
         "Career":"CEO of Xerox",
         "Video file name":"video14",
-        "BackgroundColor":"yellowish",
-        "HighlightColor":"redish",
+        "BackgroundColor":".yellowish",
+        "HighlightColor":".redish",
         "VideoLink":"https:\/\/pomf2.lain.la\/f\/kjmpcmoy.mov"
     }
 ]
