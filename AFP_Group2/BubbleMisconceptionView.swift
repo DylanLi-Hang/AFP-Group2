@@ -53,7 +53,7 @@ struct BubbleMisconceptionView: View {
                             Circle()
                                 .fill(Color(bubble.color))
                                 .frame(width: isExploded ? bubble.radius * 10 : bubble.radius * 2, height: isExploded ? bubble.radius * 10 : bubble.radius * 2)
-                                .opacity(isExploded ? 0 : 1)
+                                .opacity(isExploded ? 0 : (bubble.isPopped ? 0.5 : 1))
                                 .animation(.easeInOut.speed(0.6), value: isExploded)
                                 .gesture(
                                         DragGesture()
@@ -132,6 +132,8 @@ struct BubbleMisconceptionView: View {
                     }
                         
                 }
+                
+                misconceptions[1].state = true
             }
             if let timer = timer {
                 RunLoop.main.add(timer, forMode: .common)
@@ -228,13 +230,13 @@ struct BubbleMisconceptionView: View {
                 if index == tappedIndex {
                 // Expand the clicked circle
                     if bubbles[index].radius < 150{
-                        bubbles[index].radius *= 1.7
+                        bubbles[index].radius *= 1.4
                         
                         // Move the clicked circle to the center of the screen
                         let centerX = renderWidth / 2
-//                        let centerY = renderHeight / 4
+                        let centerY = renderHeight / 4
                         bubbles[index].position.x = centerX
-//                        bubbles[index].position.y = centerY
+                        bubbles[index].position.y = centerY
                         
                     }
                 }
@@ -258,7 +260,7 @@ struct BubbleMisconceptionView: View {
                     color: UIColor[item.backgroundColor],
                     text: item.misconception,
                     visible: true,
-                    isPopped: false
+                    isPopped: item.state
                 ))
             }
             //print("Bubbles Array : >> \(bubbles)")

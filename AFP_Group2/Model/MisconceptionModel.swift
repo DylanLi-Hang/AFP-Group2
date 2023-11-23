@@ -19,7 +19,7 @@ struct MisconceptionModel: Codable {
     let backgroundColor: String
     let highlightColor: String
     
-    var state: Bool = true
+    var state: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case misconception = "Misconception"
