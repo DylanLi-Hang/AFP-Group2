@@ -9,33 +9,48 @@ import SwiftUI
 import SpriteKit
 
 struct CollectStarView: View {
-    var scene: SKScene {
-        let scene = StarScene()
-        
-        scene.size = CGSize(width: 100, height: 160)
-        scene.scaleMode = .aspectFill
-        return scene
-    }
+    @State private var isStarVisible = false
+    let starScene = StarScene(size: CGSize(width: 100, height: 160), backgroundColor: .white)
     
     var body: some View {
-        ZStack{
-            SpriteView(scene: scene)
+        ZStack {
+            SpriteView(scene: starScene)
                 .frame(width: 100, height: 160)
-                .offset(y:120)
+                .offset(y: 120)
+            
             BottleView(isHighlighted: false)
                 .offset(y:120)
-
+            
+            Button(action: {
+                starScene.addStar() // Call addStar() method here
+            }) {
+                Text("Drop Star")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .offset(y: -100)
         }
-        
     }
 }
 
 class StarScene: SKScene {
+    var sceneBackgroundColor: UIColor
+    
+    init(size: CGSize, backgroundColor: UIColor) {
+        self.sceneBackgroundColor = backgroundColor
+        super.init(size: size)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func didMove(to view: SKView) {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-
-        backgroundColor = .white
+        view.allowsTransparency = true
+        backgroundColor = sceneBackgroundColor
         
         for i in 0..<10 {
             let delay = SKAction.wait(forDuration: 0.1 * Double(i))
@@ -53,6 +68,13 @@ class StarScene: SKScene {
         addChild(star)
     }
     
+    func addStar() {
+        let xPosition = CGFloat.random(in: 0...size.width)
+        let yPosition = CGFloat.random(in: 0...size.height)
+        let star = createStar(at: CGPoint(x: xPosition, y: yPosition))
+        addChild(star)
+    }
+    
     func addRandomStar() {
         let xPosition = CGFloat.random(in: 0...size.width)
         let yPosition = CGFloat.random(in: 0...size.height)
@@ -60,13 +82,25 @@ class StarScene: SKScene {
         addChild(star)
     }
     
-    func createStar(at position: CGPoint) -> SKShapeNode {
+    func createStar1(at position: CGPoint) -> SKShapeNode {
         let starPath = createStarPath()
 
         let star = SKShapeNode(path: starPath)
         star.position = position
         star.fillColor = .systemYellow
         star.strokeColor = .clear
+        star.physicsBody = SKPhysicsBody(polygonFrom: starPath)
+
+        return star
+    }
+    
+    func createStar(at position: CGPoint) -> SKSpriteNode {
+        let starTexture = SKTexture(imageNamed: "SparkPlus")
+        let star = SKSpriteNode(texture: starTexture)
+        star.position = position
+        star.size = CGSize(width: 30, height: 30)
+        
+        let starPath = createStarPath()
         star.physicsBody = SKPhysicsBody(polygonFrom: starPath)
 
         return star
