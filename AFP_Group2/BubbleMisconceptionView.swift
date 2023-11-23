@@ -6,7 +6,7 @@
 //
 import SwiftUI
 import CoreMotion
-let renderHeight =  (UIScreen.main.bounds.height) * 2
+let renderHeight =  (UIScreen.main.bounds.height)*2
 let renderWidth = UIScreen.main.bounds.width
 
 
@@ -23,6 +23,7 @@ struct BubbleMisconceptionView: View {
     
     
     @State private var bubbles: [Bubble] = []
+    //@EnvironmentObject var bubbleData: BubbleData
 
     init(stateManager: StateManager) {
         self.stateManager = stateManager
@@ -71,32 +72,37 @@ struct BubbleMisconceptionView: View {
                                                 }
                                             }
                                 )
-                                .onTapGesture {
-                                    print("Button Pressed")
-                                    // Set visibility to false for all bubbles except the tapped one
-                                    for i in bubbles.indices {
-                                        bubbles[i].visible = (bubbles[i] == bubble)
+                            VStack(alignment: .center, spacing: 0){
+                                        Spacer()
+                                        Text(bubble.text)
+                                            .font(.title2)                                            
+                                            .fixedSize(horizontal: false, vertical: true)
+                                        Spacer()
                                     }
-                                    // Smash State
-                                    if bubble.radius < 150{
-                                        smashState.toggle()
-                                    }
-                                    
-                                    // Change Size
-                                    let centerY = geometry.frame(in: .global).midY
-                                    handleClick(for: index, with: centerY)
-                                    
-                                    print("SMAAAAASH IT")
-                                    print("Activate Link >>: \(activateLink)")
-                                    print("Smash State >>: \(smashState)")
-                                    print("Is Exploded >>:\(isExploded)")
-                                    print("Bubble Count : >> \(bubbles.count)")
-                                }
-                            VStack {
-                                Text(bubble.text).font(.title2)
-                            }
+                            .frame(width: bubble.radius * 2 * 0.7, height: bubble.radius * 2 * 0.7)
                         }
                         .opacity(bubble.visible ? 1 : 0)
+                        .onTapGesture {
+                            print("Button Pressed")
+                            // Set visibility to false for all bubbles except the tapped one
+                            for i in bubbles.indices {
+                                bubbles[i].visible = (bubbles[i] == bubble)
+                            }
+                            // Smash State
+                            if bubble.radius < 150{
+                                smashState.toggle()
+                            }
+                            
+                            // Change Size
+                            let centerY = geometry.frame(in: .global).midY
+                            handleClick(for: index, with: centerY)
+                            
+                            print("SMAAAAASH IT")
+                            print("Activate Link >>: \(activateLink)")
+                            print("Smash State >>: \(smashState)")
+                            print("Is Exploded >>:\(isExploded)")
+                            print("Bubble Count : >> \(bubbles.count)")
+                        }
                     })
                     .foregroundColor(.white)
                     .position(bubble.position)
@@ -226,8 +232,10 @@ struct BubbleMisconceptionView: View {
                         
                         // Move the clicked circle to the center of the screen
                         let centerX = renderWidth / 2
-                      //  let centerY = renderHeight / 5
+//                        let centerY = renderHeight / 4
                         bubbles[index].position.x = centerX
+//                        bubbles[index].position.y = centerY
+                        
                     }
                 }
             }
@@ -249,7 +257,8 @@ struct BubbleMisconceptionView: View {
                     velocity: randomVelocity(),
                     color: UIColor[item.backgroundColor],
                     text: item.misconception,
-                    visible: true
+                    visible: true,
+                    isPopped: false
                 ))
             }
             //print("Bubbles Array : >> \(bubbles)")
@@ -263,21 +272,19 @@ struct BubbleMisconceptionView: View {
         if motionManager.isDeviceMotionAvailable {
             motionManager.deviceMotionUpdateInterval = 0.1
             motionManager.startDeviceMotionUpdates(to: .main) { (data, error) in
-                if let acceleration = data?.userAcceleration {
-                    if acceleration.x > 2.0 || acceleration.y > 2.0 || acceleration.z > 2.0 {
+                guard let acceleration = data?.userAcceleration else { return }
+
+                let accelerationThreshold: Double = 2.0
+                if acceleration.x > accelerationThreshold || acceleration.y > accelerationThreshold || acceleration.z > accelerationThreshold {
+                    withAnimation {
+                        isExploded.toggle()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                                activateLink.toggle()
+                                            }
                     }
                 }
             }
-            if smashState{
-                withAnimation {
-                    isExploded.toggle()
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                   activateLink = true
-                               }
-            }
         }
-       
     }
     
     private func stopMotionManager() {
@@ -292,6 +299,7 @@ struct Bubble: Equatable {
     var color: UIColor
     var text: String
     var visible: Bool
+    var isPopped: Bool
 }
 
 extension Bubble {
@@ -301,7 +309,9 @@ extension Bubble {
                lhs.velocity == rhs.velocity &&
                lhs.color == rhs.color &&
                lhs.text == rhs.text &&
+               lhs.isPopped == rhs.isPopped &&
                lhs.visible == rhs.visible
+               
     }
 }
 
@@ -327,8 +337,6 @@ class StateManager {
         case profile
     }
     
-//    var bubble = Bubble(radius: 100, position: CGPoint() , velocity: CGVector(dx:1, dy:1), color: .black, text: "error", visible: true)
-    
     var current: screen = screen.home
 
 }
@@ -339,3 +347,5 @@ class YourScrollViewDelegate: NSObject, UIScrollViewDelegate {
         return true
     }
 }
+
+
