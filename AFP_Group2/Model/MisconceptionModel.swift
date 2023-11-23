@@ -18,6 +18,7 @@ struct MisconceptionModel: Codable {
     
     let backgroundColor: String
     let highlightColor: String
+    let videoURL: String
     
     var state: Bool = false
 
@@ -30,6 +31,7 @@ struct MisconceptionModel: Codable {
         case videoFileName = "Video file name"
         case backgroundColor = "BackgroundColor"
         case highlightColor = "HighlightColor"
+        case videoURL = "VideoLink"
     }
 }
 

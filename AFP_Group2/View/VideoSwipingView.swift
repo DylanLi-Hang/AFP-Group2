@@ -12,7 +12,7 @@ struct VideoSwipingView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var isLinkActive = false
     
-    let url = URL(string: "https://devstreaming-cdn.apple.com/videos/wwdc/2023/10118/4/A2DA3123-3E74-4ECF-9961-EA390BE9B502/cmaf.m3u8")
+    let url = URL(string: "https://a.uguu.se/ybkMYwxA.mov")
     
     init() {
         UINavigationBar.appearance().backgroundColor = .clear
