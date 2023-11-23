@@ -12,13 +12,32 @@ struct QuoteViewScroll: View {
         VStack {
             
             ZStack {
-                Color("redish").ignoresSafeArea()
+                Color("yellowish").ignoresSafeArea()
                 VStack {
-                    Spacer()
                     let misconception = misconceptions[1]
-                    Text(attributedString(text: misconception.quoteOrFact, highlighted: misconception.highlight, backgroundColor: UIColor[misconception.backgroundColor], foregroundColor: UIColor[misconception.highlightColor]))
+                    Spacer()
+                    Text(misconception.misconception).font(.title)
+                        .multilineTextAlignment(.center)
+                        .frame(width: (UIScreen.main.bounds.width)/2)
+                        .bold()
+      
+                         
+                    Spacer()
+                   
+                    Text(attributedString(text: misconception.quoteOrFact, highlighted: misconception.highlight, backgroundColor: .redish, foregroundColor: .white))
                             .font(.title)
-                            .padding(30)
+                            .multilineTextAlignment(.center)
+                            .frame(width: (UIScreen.main.bounds.width)*0.8)
+                    
+                    Spacer()
+                    
+                    Text(misconception.citation).font(.title2)
+                        .multilineTextAlignment(.center)
+                        .frame(width: (UIScreen.main.bounds.width)/2)
+                 
+
+                    
+                    
                     HStack {
                         Spacer()
                         VStack {
@@ -38,31 +57,7 @@ struct QuoteViewScroll: View {
                     }
                     .padding([.bottom, .trailing])
                 }
-            }
-            
-            /*Text(attributedString(text: misconception.quoteOrFact, highlighted: misconception.highlight, backgroundColor: UIColor[misconception.backgroundColor], foregroundColor: UIColor[misconception.highlightColor]))
-                    .font(.title)
-                    .padding(30)
-            Spacer()
-            HStack {
-                Spacer()
-                VStack {
-                    Image(systemName: "bookmark")
-                        .resizable(resizingMode: .stretch)
-                        .frame(width: 24.0, height: 39.0)
-                        .foregroundColor(Color.white)
-                    Spacer()
-                        .frame(height: 15)
-                    Image(systemName: "square.and.arrow.up")
-                        .resizable(resizingMode: .stretch)
-                        .frame(width: 24.0, height: 30.52)
-                        .foregroundColor(Color.white)
-                    Spacer()
-                        .frame(height: 15)
-                }
-            }
-            .padding([.bottom, .trailing])*/
-//                        QuoteView()
+            }                       
         }
     }
 }

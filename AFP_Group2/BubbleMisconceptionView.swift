@@ -23,6 +23,7 @@ struct BubbleMisconceptionView: View {
     
     
     @State private var bubbles: [Bubble] = []
+    //@EnvironmentObject var bubbleData: BubbleData
 
     init(stateManager: StateManager) {
         self.stateManager = stateManager
@@ -256,7 +257,8 @@ struct BubbleMisconceptionView: View {
                     velocity: randomVelocity(),
                     color: UIColor[item.backgroundColor],
                     text: item.misconception,
-                    visible: true
+                    visible: true,
+                    isPopped: false
                 ))
             }
             //print("Bubbles Array : >> \(bubbles)")
@@ -284,27 +286,6 @@ struct BubbleMisconceptionView: View {
             }
         }
     }
-
-//    private func startMotionManager() {
-//        if motionManager.isDeviceMotionAvailable {
-//            motionManager.deviceMotionUpdateInterval = 0.1
-//            motionManager.startDeviceMotionUpdates(to: .main) { (data, error) in
-//                if let acceleration = data?.userAcceleration {
-//                    if acceleration.x > 2.0 || acceleration.y > 2.0 || acceleration.z > 2.0 {
-//                    }
-//                }
-//            }
-//            if smashState{
-//                withAnimation {
-//                    isExploded.toggle()
-//                }
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                                   activateLink = true
-//                               }
-//            }
-//        }
-//       
-//    }
     
     private func stopMotionManager() {
         motionManager.stopDeviceMotionUpdates()
@@ -318,6 +299,7 @@ struct Bubble: Equatable {
     var color: UIColor
     var text: String
     var visible: Bool
+    var isPopped: Bool
 }
 
 extension Bubble {
@@ -327,7 +309,9 @@ extension Bubble {
                lhs.velocity == rhs.velocity &&
                lhs.color == rhs.color &&
                lhs.text == rhs.text &&
+               lhs.isPopped == rhs.isPopped &&
                lhs.visible == rhs.visible
+               
     }
 }
 
@@ -353,8 +337,6 @@ class StateManager {
         case profile
     }
     
-//    var bubble = Bubble(radius: 100, position: CGPoint() , velocity: CGVector(dx:1, dy:1), color: .black, text: "error", visible: true)
-    
     var current: screen = screen.home
 
 }
@@ -365,3 +347,5 @@ class YourScrollViewDelegate: NSObject, UIScrollViewDelegate {
         return true
     }
 }
+
+

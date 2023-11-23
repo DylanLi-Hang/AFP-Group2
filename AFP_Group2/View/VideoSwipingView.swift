@@ -53,7 +53,7 @@ struct VideoSwipingView: View {
         .navigationBarItems(
             leading: backButton,
             trailing: HStack {
-                Text("Misconception Title").font(.title2)
+                Text("Men are better than women in sciences").font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.trailing)
