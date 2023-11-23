@@ -36,6 +36,7 @@ struct ContentView: View {
                 }
                 .tag(".profile")
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

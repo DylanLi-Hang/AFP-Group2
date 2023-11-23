@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GuidanceView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var isActive: Bool = false
     var body: some View {
         NavigationView {
@@ -55,8 +56,36 @@ struct GuidanceView: View {
                     .hidden()
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+                            leading: backButton,
+                            trailing: HStack {
+                                Text("Guidance").font(.title2)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.blue)
+                                    .multilineTextAlignment(.trailing)
+                            }
+                        )
     }
+    
+    // Custom back button
+       private var backButton: some View {
+           Button(action: {
+               // Handle custom back button action
+               presentationMode.wrappedValue.dismiss()
+           }) {
+               HStack {
+                   Image(systemName: "chevron.backward")
+                       .resizable(resizingMode: .stretch)
+                       .frame(width: 11.0, height: 18.0)
+                       .foregroundColor(Color.blue)
+               }
+               .foregroundColor(.white)
+           }
+       }
 }
+
+
 
 
 struct GuidanceView_Previews: PreviewProvider {
