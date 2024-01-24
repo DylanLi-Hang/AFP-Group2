@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct AFP_Group2App: App {
@@ -16,7 +17,7 @@ struct AFP_Group2App: App {
     
     var body: some Scene {
         WindowGroup {
-            MainStarterView()
+            MainStarterView().modelContainer(for: MisconceptionModel.self)
         }
     }
 }

@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SavedView: View {
+    
+    @Environment (\.modelContext) private var modelContext
+    @Query private var savedConceptions: [MisconceptionModel]
     
     let images: [String] = ["VideoImage1", "VideoImage2", "VideoImage3", "Quote1", "Quote2", "Quote3", "VideoImage4", "VideoImage5", "VideoImage6"]
 
@@ -27,12 +31,8 @@ struct SavedView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 12) {
-                    ForEach(images, id: \.self) { imageName in
-                        Image(imageName) // Use your own image assets
-                            .resizable()
-                            .scaledToFit()
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .cornerRadius(8)
+                    ForEach(savedConceptions, id: \.self) { misconception in
+                        Text(misconception.quoteOrFact)
                     }
                 }
                 .padding(.horizontal)
@@ -80,7 +80,7 @@ struct NavigationBarModifier: ViewModifier {
 
 struct SavedView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedView()
+        SavedView().modelContainer(for: MisconceptionModel.self, inMemory: true)
     }
 }
 

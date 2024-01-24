@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct QuoteViewScroll: View {
+    
+    @Environment (\.modelContext) private var modelContext
+    @Query private var savedMisconceptions: [MisconceptionModel]
+    
     @State private var isBookmarked = false
     @State private var isArrowUpActive = false
     var misconception:MisconceptionModel
@@ -54,14 +59,21 @@ struct QuoteViewScroll: View {
                                 Spacer()
                                 VStack {
                                     Spacer()
-                                    Image(systemName: isBookmarked ? "bookmark.fill" : "bookmark")
-                                        .resizable()
-                                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                                        .frame(width: 25, height: 25)
-                                        .foregroundColor(Color.white)
-                                        .onTapGesture {
-                                            isBookmarked.toggle()
+                                    Button {
+                                        if misconception.quoteBookmark {
+                                            modelContext.delete(misconception)
+                                            misconception.quoteBookmark = false
+                                        } else {
+                                            modelContext.insert(misconception)
+                                            misconception.quoteBookmark = true
                                         }
+                                    } label: {
+                                        Image(systemName: misconception.quoteBookmark ? "bookmark.fill" : "bookmark")
+                                            .resizable()
+                                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                            .frame(width: 25, height: 25)
+                                            .foregroundColor(Color.white)
+                                    }
                                     Spacer()
                                         .frame(height: 20)
                                     ShareLink(item: misconception.quoteOrFact) {

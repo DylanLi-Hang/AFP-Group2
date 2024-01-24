@@ -1,6 +1,11 @@
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    
+    @Environment (\.modelContext) private var modelContext
+    @Query private var misconceptions: [MisconceptionModel]
+    
     init() {
         // Configure the UITabBar appearance
         let appearance = UITabBarAppearance()
@@ -42,5 +47,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    ContentView().modelContainer(for: MisconceptionModel.self, inMemory: true)
 }

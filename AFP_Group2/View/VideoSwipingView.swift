@@ -24,7 +24,7 @@ struct VideoSwipingView: View {
     }
     
     var body: some View {
-        let y = print("Update body")
+        let y: () = print("Update body")
         ScrollView(.vertical, showsIndicators: false) {
             LazyVStack(spacing: 0) {
                 
@@ -40,7 +40,7 @@ struct VideoSwipingView: View {
                     Rectangle()
                         .fill(Color.clear.opacity(0.6))
                         .containerRelativeFrame([.horizontal, .vertical])
-                    VideoView(url_link:misconception.videoURL)
+                    VideoView(misconception: misconception)
                     
                 }
                 
