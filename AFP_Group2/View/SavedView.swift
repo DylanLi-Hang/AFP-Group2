@@ -32,7 +32,17 @@ struct SavedView: View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 12) {
                     ForEach(savedConceptions, id: \.self) { misconception in
-                        Text(misconception.quoteOrFact)
+                        NavigationLink {
+                            VideoSwipingView(misconception: misconception)
+                        } label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 15.0).fill(Color(misconception.bubbleColor))
+                                Text(misconception.quoteOrFact)
+                                    .foregroundStyle(.white)
+                                    .font(.caption)
+                                    .padding()
+                            }.frame(width: 110, height: 175)
+                        }
                     }
                 }
                 .padding(.horizontal)
