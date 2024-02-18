@@ -6,6 +6,9 @@
 //
 import SwiftUI
 import CoreMotion
+import SwiftData
+
+
 let renderHeight =  (UIScreen.main.bounds.height)*2
 let renderWidth = UIScreen.main.bounds.width
 
@@ -332,7 +335,15 @@ extension CGVector {
 }
 
 #Preview {
-    BubbleMisconceptionView(stateManager: StateManager())
+    let container = try! ModelContainer(for: MisconceptionModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        let context = container.mainContext
+
+    let model = MisconceptionModel(misconception: "", quoteOrFact: "", highlight: "", citation: "", career: "", videoFileName: "", bubbleColor: "", backgroundColor: "", highlightColor: "", backgroundTextColor: "", highlightTextColor: "", videoURL: "", state: true)
+        context.insert(model)
+        try! context.save()
+
+        return BubbleMisconceptionView(stateManager: StateManager())
+            .modelContainer(container)
 }
 
 
