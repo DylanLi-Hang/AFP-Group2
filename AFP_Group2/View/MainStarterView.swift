@@ -27,7 +27,3 @@ struct MainStarterView: View {
         }
     }
 }
-
-#Preview {
-    MainStarterView()
-}

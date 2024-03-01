@@ -1,21 +1,22 @@
 
 import SwiftUI
 import AVKit
+import SwiftData
 
 struct VideoView: View {
-    @State private var isBookmarked = false
+    
+    @Environment (\.modelContext) private var modelContext
+    @Query private var savedVideos: [MisconceptionModel]
     @State private var isArrowUpActive = false
     @State private var player = AVPlayer()
-    let videoName: String = "video1"
-    let videoType: String = "mov"
-    var url_link:String
+    @State var misconception: MisconceptionModel
     
     var body: some View {
         ZStack {
             VideoPlayer(player: player)
                 .edgesIgnoringSafeArea(.all)
                 .onAppear() {
-                    guard let url = URL(string: url_link) else {
+                    guard let url = URL(string: misconception.videoURL) else {
                         return
                     }
                     print(url)
@@ -44,17 +45,24 @@ struct VideoView: View {
                 HStack {
                     Spacer()
                     VStack {
-                        Image(systemName: isBookmarked ? "bookmark.fill" : "bookmark")
-                            .resizable()
-                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                            .frame(width: 25, height: 25)
-                            .foregroundColor(Color.white)
-                            .onTapGesture {
-                                isBookmarked.toggle()
+                        Button {
+                            if misconception.videoBookmark {
+                                modelContext.delete(misconception)
+                                misconception.videoBookmark = false
+                            } else {
+                                modelContext.insert(misconception)
+                                misconception.videoBookmark = true
                             }
+                        } label: {
+                            Image(systemName: misconception.videoBookmark ? "bookmark.fill" : "bookmark")
+                                .resizable()
+                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(Color.white)
+                        }
                         Spacer()
                             .frame(height: 20)
-                        ShareLink(item: url_link) {
+                        ShareLink(item: misconception.videoURL) {
                             Image(systemName: "square.and.arrow.up")
                                 .resizable()
                                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
@@ -73,9 +81,4 @@ struct VideoView: View {
         //.navigationBarTitle("Title", displayMode: .inline) // Example
     }
 
-}
-struct VideoView_Previews: PreviewProvider {
-    static var previews: some View {
-        VideoView(url_link:misconceptions[0].videoURL)
-    }
 }
