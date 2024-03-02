@@ -13,7 +13,7 @@ struct SavedView: View {
     @Environment (\.modelContext) private var modelContext
     @Query private var savedConceptions: [MisconceptionModel]
     
-    let images: [String] = ["VideoImage1", "VideoImage2", "VideoImage3", "Quote1", "Quote2", "Quote3", "VideoImage4", "VideoImage5", "VideoImage6"]
+    let images: [String] = ["Video1Image", "Video2Image", "Video3Image", "Quote1Image", "Quote2Image", "Quote3Image", "Video4Image", "Video5Image", "Video6Image"]
 
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 10),
@@ -31,6 +31,16 @@ struct SavedView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 12) {
+                    
+                    // Dummy date
+                    ForEach(images, id: \.self) { imageName in
+                        Image(imageName) // Use your own image assets
+                            .resizable()
+                            .scaledToFit()
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .cornerRadius(8)
+                    }
+                    
                     ForEach(savedConceptions, id: \.self) { misconception in
                         NavigationLink {
                             VideoSwipingView(misconception: misconception)

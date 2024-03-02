@@ -103,6 +103,15 @@ struct QuoteViewScroll: View {
     }
 }
 
+
 #Preview {
-    QuoteViewScroll(misconception: misconceptions[0])
+    let container = try! ModelContainer(for: MisconceptionModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        let context = container.mainContext
+
+    let model = MisconceptionModel(misconception: "", quoteOrFact: "", highlight: "", citation: "", career: "", videoFileName: "", bubbleColor: "", backgroundColor: "", highlightColor: "", backgroundTextColor: "", highlightTextColor: "", videoURL: "", state: true)
+        context.insert(model)
+        try! context.save()
+
+        return QuoteViewScroll(misconception: misconceptions[1])
+            .modelContainer(container)
 }

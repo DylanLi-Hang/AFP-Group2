@@ -10,6 +10,7 @@ struct VideoView: View {
     @State private var isArrowUpActive = false
     @State private var player = AVPlayer()
     @State var misconception: MisconceptionModel
+    @Binding var isPlaying: Bool
     
     var body: some View {
         ZStack {
@@ -25,6 +26,13 @@ struct VideoView: View {
                 }
                 .onDisappear() {
                     player.pause()
+                }
+                .onChange(of: isPlaying) { newValue in
+                    if newValue {
+                        player.play()
+                    } else {
+                        player.pause()
+                    }
                 }
             VStack {
 //                HStack {
@@ -81,4 +89,17 @@ struct VideoView: View {
         //.navigationBarTitle("Title", displayMode: .inline) // Example
     }
 
+}
+
+
+#Preview {
+    let container = try! ModelContainer(for: MisconceptionModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        let context = container.mainContext
+
+    let model = MisconceptionModel(misconception: "", quoteOrFact: "", highlight: "", citation: "", career: "", videoFileName: "", bubbleColor: "", backgroundColor: "", highlightColor: "", backgroundTextColor: "", highlightTextColor: "", videoURL: "", state: true)
+        context.insert(model)
+        try! context.save()
+
+    return VideoView(misconception: misconceptions[1], isPlaying: .constant(false))
+            .modelContainer(container)
 }
