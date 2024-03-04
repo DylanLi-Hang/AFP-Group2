@@ -116,9 +116,12 @@ struct VideoSwipingView: View {
 
     private var misconceptionsLink: some View {
         NavigationLink(destination: ContentView(), isActive: $isLinkActive) {
-            Text("Misconceptions")
+            Text(misconception.misconception)
                 .font(.title2)
                 .foregroundColor(.white)
+                .frame(width: 200)
+                .minimumScaleFactor(0.5)
+                .multilineTextAlignment(.trailing)
                 .onTapGesture { isLinkActive = true}
         }
     }
