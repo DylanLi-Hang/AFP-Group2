@@ -27,11 +27,14 @@ struct VideoView: View {
                 .onDisappear() {
                     player.pause()
                 }
-                .onChange(of: isPlaying) { newValue in
+                .onChange(of: isPlaying) { oldValue, newValue in
+                    print("new value:", newValue)
                     if newValue {
                         player.play()
+                        print("video plays!")
                     } else {
                         player.pause()
+                        print("video pauses!")
                     }
                 }
             VStack {

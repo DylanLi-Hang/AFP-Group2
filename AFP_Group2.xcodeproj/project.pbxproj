@@ -40,6 +40,8 @@
 		FC24E3522B9214AE00583E9C /* ScrollViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E3512B9214AE00583E9C /* ScrollViewTest.swift */; };
 		FC24E3542B921AC700583E9C /* ComplexScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E3532B921AC700583E9C /* ComplexScrollView.swift */; };
 		FC24E3562B921E7A00583E9C /* PauseTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E3552B921E7A00583E9C /* PauseTestView.swift */; };
+		FC24E35A2B95F4F700583E9C /* TestSwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E3592B95F4F700583E9C /* TestSwipingView.swift */; };
+		FC24E35C2B960A6C00583E9C /* SwpingView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E35B2B960A6C00583E9C /* SwpingView2.swift */; };
 		FC2A24B62B0B1BE6006F81FF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = FC2A24B52B0B1BE6006F81FF /* Lottie */; };
 		FC2A24B82B0B1CC3006F81FF /* tap.json in Resources */ = {isa = PBXBuildFile; fileRef = FC2A24B72B0B1CC3006F81FF /* tap.json */; };
 		FC2A24BA2B0B1CCF006F81FF /* VideoSwipingViewOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A24B92B0B1CCF006F81FF /* VideoSwipingViewOld.swift */; };
@@ -86,6 +88,8 @@
 		FC24E3512B9214AE00583E9C /* ScrollViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTest.swift; sourceTree = "<group>"; };
 		FC24E3532B921AC700583E9C /* ComplexScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexScrollView.swift; sourceTree = "<group>"; };
 		FC24E3552B921E7A00583E9C /* PauseTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseTestView.swift; sourceTree = "<group>"; };
+		FC24E3592B95F4F700583E9C /* TestSwipingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestSwipingView.swift; path = TestViews/TestSwipingView.swift; sourceTree = "<group>"; };
+		FC24E35B2B960A6C00583E9C /* SwpingView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwpingView2.swift; sourceTree = "<group>"; };
 		FC2A24B72B0B1CC3006F81FF /* tap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tap.json; sourceTree = "<group>"; };
 		FC2A24B92B0B1CCF006F81FF /* VideoSwipingViewOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSwipingViewOld.swift; sourceTree = "<group>"; };
 		FC2A24BB2B0B1CE5006F81FF /* TapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				FC129E4A2B0F385E00046819 /* ProfileView.swift */,
 				B6F157552B0ECBE700C21342 /* SavedView.swift */,
 				FC24E34F2B920FAE00583E9C /* SwipingView.swift */,
+				FC24E35B2B960A6C00583E9C /* SwpingView2.swift */,
+				FC24E3592B95F4F700583E9C /* TestSwipingView.swift */,
 				5B0A1AE02B0C41D400D94D49 /* VideoView.swift */,
 				FC50F8582B0ECF0F0001EBBE /* QuoteViewScroll.swift */,
 				5B0A1B062B0DB3D900D94D49 /* JarView.swift */,
@@ -312,7 +318,9 @@
 				B63B82552B0C61F000F3F37B /* SliceView.swift in Sources */,
 				FC24E3562B921E7A00583E9C /* PauseTestView.swift in Sources */,
 				FC0A27082B0ACDB80082F899 /* CollectStarView.swift in Sources */,
+				FC24E35C2B960A6C00583E9C /* SwpingView2.swift in Sources */,
 				FC646FF12B0CE1A5004807D0 /* TestJsonView.swift in Sources */,
+				FC24E35A2B95F4F700583E9C /* TestSwipingView.swift in Sources */,
 				5B0A1AE12B0C41D400D94D49 /* VideoView.swift in Sources */,
 				5B0A1ADD2B0C2F4300D94D49 /* ViewModel.swift in Sources */,
 				FC0A27082B0ACDB80082F899 /* CollectStarView.swift in Sources */,

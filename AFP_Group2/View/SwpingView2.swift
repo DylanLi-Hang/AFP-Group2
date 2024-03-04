@@ -9,36 +9,41 @@ import SwiftUI
 import AVKit
 import SwiftData
 
-struct IdentifiableView: Identifiable {
-    let id: Int
-    let view: AnyView
+enum ContentViewType: Identifiable {
+    case quote(Int)
+    case video(Int)
+    case jar(Int)
 
-    init(id: Int, view: AnyView) {
-        self.id = id
-        self.view = view
+    var id: Int {
+        switch self {
+        case .quote(let id), .video(let id), .jar(let id):
+            return id
+        }
     }
 }
 
-
-struct SwipingView: View {
+struct SwipingView2: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var isLinkActive = false
     @State private var scrollID: IdentifiableView.ID?
     @State private var isPlaying = false
     
+    private let contentViewTypes: [ContentViewType] = [.quote(1), .video(2), .jar(3)]
+    
     var misconception: MisconceptionModel
-    private var views: [IdentifiableView] = []
 
     init(misconception: MisconceptionModel) {
         self.misconception = misconception
         setupNavigationBarAppearance()
-        views.append(IdentifiableView(id: 1, view: AnyView(quoteView)))
-        views.append(IdentifiableView(id: 2, view: AnyView(videoView)))
-        views.append(IdentifiableView(id: 3, view: AnyView(jarView)))
     }
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
+//            Button {
+//                isPlaying.toggle()
+//            } label: {
+//                Text("Is")
+//            }
             contentStack
         }
         .scrollPosition(id: $scrollID)
@@ -59,8 +64,18 @@ struct SwipingView: View {
 
     private var contentStack: some View {
         LazyVStack(spacing: 0) {
-            ForEach(views) { identifiableView in
-                identifiableView.view
+            ForEach(contentViewTypes) { viewType in
+                Group {
+                    switch viewType {
+                    case .quote:
+                        quoteView
+                    case .video:
+                        videoView
+                    case .jar:
+                        jarView
+                    }
+                }
+                .id(viewType.id)
             }
         }
         .scrollTargetLayout()
@@ -130,7 +145,7 @@ struct SwipingView: View {
         context.insert(model)
         try! context.save()
 
-        return SwipingView(misconception: misconceptions[1])
+        return SwipingView2(misconception: misconceptions[1])
             .modelContainer(container)
 }
 

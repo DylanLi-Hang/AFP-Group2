@@ -1,45 +1,91 @@
 //
-//  VideoSwipingViewTest.swift
+//  TestSwipingView.swift
 //  AFP_Group2
 //
-//  Created by Dylan on 2/3/2024.
+//  Created by Dylan on 4/3/2024.
 //
+
+import SwiftUI
 
 import SwiftUI
 import AVKit
 import SwiftData
 
-struct IdentifiableView: Identifiable {
-    let id: Int
-    let view: AnyView
+// Define the protocol for content views
+protocol ContentViewProtocol2 {
+    var id: Int { get }
+    func view(isPlaying: Binding<Bool>, misconception: MisconceptionModel) -> AnyView
+}
 
-    init(id: Int, view: AnyView) {
-        self.id = id
-        self.view = view
+// Implement the protocol for each content type
+struct QuoteContent: ContentViewProtocol2 {
+    var id: Int
+    
+    func view(isPlaying: Binding<Bool>, misconception: MisconceptionModel) -> AnyView {
+        AnyView(
+            ZStack {
+                semiTransparentRectangle
+                QuoteViewScroll(misconception: misconception)
+            }
+        )
     }
 }
 
+struct VideoContent: ContentViewProtocol2 {
+    var id: Int
+    
+    func view(isPlaying: Binding<Bool>, misconception: MisconceptionModel) -> AnyView {
+        AnyView(
+            ZStack {
+                semiTransparentRectangle
+                VideoView(misconception: misconception, isPlaying: isPlaying)
+            }
+        )
+    }
+}
 
-struct SwipingView: View {
+struct JarContent: ContentViewProtocol2 {
+    var id: Int
+    
+    func view(isPlaying: Binding<Bool>, misconception: MisconceptionModel) -> AnyView {
+        AnyView(
+            ZStack {
+                semiTransparentRectangle.background(.yellowish)
+                JarView()
+            }
+        )
+    }
+}
+
+// Update SwipingView to use protocol conforming instances
+struct TestSwipingView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var isLinkActive = false
-    @State private var scrollID: IdentifiableView.ID?
+    @State private var scrollID: Int?
     @State private var isPlaying = false
     
+    private let contentViews: [ContentViewProtocol2] = [
+        QuoteContent(id: 1),
+        VideoContent(id: 2),
+        JarContent(id: 3)
+    ]
+    
     var misconception: MisconceptionModel
-    private var views: [IdentifiableView] = []
 
     init(misconception: MisconceptionModel) {
         self.misconception = misconception
         setupNavigationBarAppearance()
-        views.append(IdentifiableView(id: 1, view: AnyView(quoteView)))
-        views.append(IdentifiableView(id: 2, view: AnyView(videoView)))
-        views.append(IdentifiableView(id: 3, view: AnyView(jarView)))
     }
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            contentStack
+            LazyVStack(spacing: 0) {
+                ForEach(contentViews, id: \.id) { contentView in
+                    contentView.view(isPlaying: $isPlaying, misconception: misconception)
+                        .id(contentView.id)
+                }
+            }
+            .scrollTargetLayout()
         }
         .scrollPosition(id: $scrollID)
         .onChange(of: scrollID) { oldValue, newValue in
@@ -55,43 +101,6 @@ struct SwipingView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton, trailing: misconceptionsLink)
         .ignoresSafeArea()
-    }
-
-    private var contentStack: some View {
-        LazyVStack(spacing: 0) {
-            ForEach(views) { identifiableView in
-                identifiableView.view
-            }
-        }
-        .scrollTargetLayout()
-    }
-
-
-    private var quoteView: some View {
-        ZStack {
-            semiTransparentRectangle
-            QuoteViewScroll(misconception: misconception)
-        }
-    }
-
-    private var videoView: some View {
-        ZStack {
-            semiTransparentRectangle
-            VideoView(misconception: misconception, isPlaying: $isPlaying)
-        }
-    }
-
-    private var jarView: some View {
-        ZStack {
-            semiTransparentRectangle.background(.yellowish)
-            JarView()
-        }
-    }
-
-    private var semiTransparentRectangle: some View {
-        Rectangle()
-            .fill(Color.clear.opacity(0.6))
-            .containerRelativeFrame([.horizontal, .vertical])
     }
 
     private var backButton: some View {
@@ -121,6 +130,13 @@ struct SwipingView: View {
     }
 }
 
+// Define the semiTransparentRectangle as a global function or view since it's used in multiple places
+private var semiTransparentRectangle: some View {
+    Rectangle()
+        .fill(Color.clear.opacity(0.6))
+        .containerRelativeFrame([.horizontal, .vertical])
+}
+
 
 #Preview {
     let container = try! ModelContainer(for: MisconceptionModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
@@ -130,7 +146,6 @@ struct SwipingView: View {
         context.insert(model)
         try! context.save()
 
-        return SwipingView(misconception: misconceptions[1])
+        return TestSwipingView(misconception: misconceptions[1])
             .modelContainer(container)
 }
-

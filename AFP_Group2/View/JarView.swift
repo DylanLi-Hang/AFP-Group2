@@ -35,6 +35,7 @@ struct JarView: View {
                                 .fixedSize()
                             
                             Button(action: {
+                                print("tapped!")
                                 starScene.addStar()
                             }) {
                                 Image("SparkLatest")
