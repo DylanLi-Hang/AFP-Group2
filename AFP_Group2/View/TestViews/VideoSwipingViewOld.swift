@@ -115,6 +115,6 @@ extension View {
         context.insert(model)
         try! context.save()
 
-        return VideoSwipingView(misconception: misconceptions[1])
+        return SwipingView(misconception: misconceptions[1])
             .modelContainer(container)
 }

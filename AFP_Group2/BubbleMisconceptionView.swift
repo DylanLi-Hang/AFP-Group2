@@ -147,7 +147,7 @@ struct BubbleMisconceptionView: View {
                     
                 }
                 .frame(width: renderWidth, height: smashState ? renderHeight/2 : renderHeight)
-                NavigationLink(destination: VideoSwipingView(misconception: misconceptionSelected), isActive: $activateLink) {
+                NavigationLink(destination: SwipingView(misconception: misconceptionSelected), isActive: $activateLink) {
                     EmptyView()
                 }
                 .hidden()

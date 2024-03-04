@@ -36,7 +36,7 @@
 		FC129E4B2B0F385E00046819 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC129E4A2B0F385E00046819 /* ProfileView.swift */; };
 		FC18A0302B0F66550024812D /* ProfileTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18A02F2B0F66550024812D /* ProfileTestView.swift */; };
 		FC18A0322B0F66F50024812D /* MainStarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18A0312B0F66F50024812D /* MainStarterView.swift */; };
-		FC24E3502B920FAE00583E9C /* VideoSwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E34F2B920FAE00583E9C /* VideoSwipingView.swift */; };
+		FC24E3502B920FAE00583E9C /* SwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E34F2B920FAE00583E9C /* SwipingView.swift */; };
 		FC24E3522B9214AE00583E9C /* ScrollViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E3512B9214AE00583E9C /* ScrollViewTest.swift */; };
 		FC24E3542B921AC700583E9C /* ComplexScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E3532B921AC700583E9C /* ComplexScrollView.swift */; };
 		FC24E3562B921E7A00583E9C /* PauseTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24E3552B921E7A00583E9C /* PauseTestView.swift */; };
@@ -82,7 +82,7 @@
 		FC18A02F2B0F66550024812D /* ProfileTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTestView.swift; sourceTree = "<group>"; };
 		FC18A0312B0F66F50024812D /* MainStarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStarterView.swift; sourceTree = "<group>"; };
 		FC18A0332B0F6C7B0024812D /* Misconceptions.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Misconceptions.xlsx; sourceTree = "<group>"; };
-		FC24E34F2B920FAE00583E9C /* VideoSwipingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSwipingView.swift; sourceTree = "<group>"; };
+		FC24E34F2B920FAE00583E9C /* SwipingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingView.swift; sourceTree = "<group>"; };
 		FC24E3512B9214AE00583E9C /* ScrollViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTest.swift; sourceTree = "<group>"; };
 		FC24E3532B921AC700583E9C /* ComplexScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexScrollView.swift; sourceTree = "<group>"; };
 		FC24E3552B921E7A00583E9C /* PauseTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseTestView.swift; sourceTree = "<group>"; };
@@ -167,10 +167,11 @@
 				05CD9C112B0B0202007C0BF7 /* BubbleMisconceptionView.swift */,
 				FC129E4A2B0F385E00046819 /* ProfileView.swift */,
 				B6F157552B0ECBE700C21342 /* SavedView.swift */,
-				FC24E34F2B920FAE00583E9C /* VideoSwipingView.swift */,
+				FC24E34F2B920FAE00583E9C /* SwipingView.swift */,
 				5B0A1AE02B0C41D400D94D49 /* VideoView.swift */,
 				FC50F8582B0ECF0F0001EBBE /* QuoteViewScroll.swift */,
 				5B0A1B062B0DB3D900D94D49 /* JarView.swift */,
+				FC0A27072B0ACDB80082F899 /* CollectStarView.swift */,
 				FC646FF02B0CE1A5004807D0 /* TestJsonView.swift */,
 				5B0A1ADC2B0C2F4300D94D49 /* ViewModel.swift */,
 			);
@@ -205,7 +206,6 @@
 				FC2A24BF2B0B2156006F81FF /* QuoteView.swift */,
 				FC18A02F2B0F66550024812D /* ProfileTestView.swift */,
 				FC0B388B2B0C1DC2005ECC61 /* Icons.swift */,
-				FC0A27072B0ACDB80082F899 /* CollectStarView.swift */,
 				FC24E3512B9214AE00583E9C /* ScrollViewTest.swift */,
 				FC24E3532B921AC700583E9C /* ComplexScrollView.swift */,
 				FC24E3552B921E7A00583E9C /* PauseTestView.swift */,
@@ -295,7 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC24E3502B920FAE00583E9C /* VideoSwipingView.swift in Sources */,
+				FC24E3502B920FAE00583E9C /* SwipingView.swift in Sources */,
 				FC0228E42B06F99200BCC14C /* (null) in Sources */,
 				FC2A24BC2B0B1CE5006F81FF /* TapView.swift in Sources */,
 				5B0A1ACB2B0705FD00D94D49 /* (null) in Sources */,

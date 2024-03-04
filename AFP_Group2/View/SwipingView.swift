@@ -23,7 +23,7 @@ enum ContentViewType: Identifiable {
 }
 
 
-struct VideoSwipingView: View {
+struct SwipingView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var isLinkActive = false
     @State private var scrollID: Int?
@@ -141,6 +141,6 @@ struct VideoSwipingView: View {
         context.insert(model)
         try! context.save()
 
-        return VideoSwipingView(misconception: misconceptions[1])
+        return SwipingView(misconception: misconceptions[1])
             .modelContainer(container)
 }

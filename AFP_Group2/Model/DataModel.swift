@@ -7,8 +7,12 @@
 
 import Foundation
 import UIKit
+import SwiftData
 
 var misconceptions: [MisconceptionModel] = load("data.json")
+//var backgroundImporter: BackgroundImporter = try! BackgroundImporter(modelContainer: ModelContainer(for: MisconceptionModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true)))
+
+
 
 private func loadJsonDataFromFile() {
     guard let fileUrl = Bundle.main.url(forResource: "data", withExtension: "json") else {
@@ -60,4 +64,24 @@ func attributedString(text: String, highlighted: String? = nil, backgroundColor:
     }
 
     return attributedString
+}
+
+class BackgroundImporter {
+    var modelContainer: ModelContainer
+
+    init(modelContainer: ModelContainer) {
+        print("init?")
+        self.modelContainer = modelContainer
+        backgroundInsert()
+    }
+
+    func backgroundInsert() {
+        let modelContext = ModelContext(modelContainer)
+        misconceptions[0].quoteBookmark = true
+        
+        modelContext.insert(misconceptions[0])
+        
+        print("inserted")
+        
+    }
 }

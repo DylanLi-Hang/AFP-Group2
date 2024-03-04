@@ -4,7 +4,7 @@ import SwiftData
 struct ContentView: View {
     
     @Environment (\.modelContext) private var modelContext
-    @Query private var misconceptions: [MisconceptionModel]
+    @Query private var misconceptions_model: [MisconceptionModel]
     
     init() {
         // Configure the UITabBar appearance
