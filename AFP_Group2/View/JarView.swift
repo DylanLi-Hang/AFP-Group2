@@ -34,15 +34,22 @@ struct JarView: View {
                                 .scaledToFit()
                                 .fixedSize()
                             
-                            Button(action: {
-                                starScene.addStar()
-                            }) {
-                                Image("SparkLatest")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100) // Set your desired width and height
-                            }
-                            .offset(y: -300)
+//                            Button(action: {
+//                                starScene.addStar()
+//                            }) {
+//                                Image("SparkLatest")
+//                                    .resizable()
+//                                    .scaledToFit()
+//                                    .frame(width: 100, height: 100) // Set your desired width and height
+//                            }
+//                            .offset(y: -300)
+                            
+                            Image("SparkLatest")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                                .offset(y: -300)
+                                .allowsHitTesting(false)
                         }
                         .offset(y: 200)
                         
